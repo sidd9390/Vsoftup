@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+.img-indi{
+    overflow-x: scroll;
+}
+body {
+  font-family: "Noto Sans", sans-serif;
+}
+
+.img-indi button{
+  border: none;
+  padding: 5px;
+}
+.img-indi::-webkit-scrollbar{
+    display: none;
+}
+.res_image {
+  width: 400px;
+}
+.overlay_text{
+  position: absolute;
+  top: 100px;
+    right: 10%;
+}
+.navbar-toggler-icon {
+    background-image: none!important;
+    background-color: transparent;
+    height: 3px;
+    width: 25px;
+    margin: 10px 0;
+    position: relative;
+    transition: all 0.35s ease-out;
+    transform-origin: center;
+  }
+  
+  .navbar-toggler-icon::before {
+    display: block;
+    background-color: white;
+    height: 3px;
+    content: "";
+    position: relative;
+    top: 5px;
+    transition: all 0.15s ease-out;/*taken down to hide quicker*/
+    transform-origin: center;
+  }
+  
+  .navbar-toggler-icon::after {
+    display: block;
+    background-color: white;
+    height: 3px;
+    content: "";
+    position: relative;
+    top: 18px;
+    transition: all 0.35s ease-out;
+    transform-origin: center;
+  }
+  
+  .navbar-dark .navbar-toggler-icon,
+  .navbar-dark .navbar-toggler-icon::before,
+  .navbar-dark .navbar-toggler-icon::after {
+    background-color: white;
+  }
+
+.about_card{
+  margin-left: 0px;
+}
+  @media screen and (min-width: 993px) {
+    .about_card{
+      margin-left: -100px;
+    }
+  }
+
+/* Custom CSS for responsive design and equal card heights */
+.card {
+  height: 100%;
+  align-items: normal;
+  /* Add this line */
+}
+@media (max-width: 769px){
+  .res_image {
+    width: 200px;
+  }
+  .overlay_text{
+    position: absolute;
+    top: 2%;
+      left: 5%;
+    width: 100%;
+  }
+}
+
+
+.glass{
+  background: rgba( 0, 0, 0, 0.75 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 0px );
+-webkit-backdrop-filter: blur( 0px );
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.scroller__inner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.scroller[data-animated="true"] {
+  overflow: hidden;
+}
+
+.scroller[data-animated="true"] .scroller__inner {
+  width: max-content;
+  flex-wrap: nowrap;
+  animation: scroll var(--_animation-duration, 40s)
+    var(--_animation-direction, forwards) linear infinite;
+}
+
+.scroller[data-direction="right"] {
+  --_animation-direction: reverse;
+}
+
+.scroller[data-direction="left"] {
+  --_animation-direction: forwards;
+}
+
+.scroller[data-speed="fast"] {
+  --_animation-duration: 20s;
+}
+
+.scroller[data-speed="slow"] {
+  --_animation-duration: 90s;
+}
+
+@keyframes scroll {
+  to {
+    transform: translate(calc(-50% - 0.5rem));
+  }
+}
+
+/* general styles */
+
+:root {
+  --clr-neutral-100: transparent;
+  --clr-primary-100: transparent;
+  --clr-primary-400: transparent;
+  --clr-primary-800: transparent;
+  --clr-primary-900: transparent;
+}
+.tag-list {
+  margin: 0;
+  padding-inline: 0;
+  list-style: none;
+}
+
+.tag-list li {
+  padding: 1rem;
+  background: var(--clr-primary-400);
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 1rem -0.25rem var(--clr-primary-900);
+}
+
+/* for testing purposed to ensure the animation lined up correctly */
+.test {
+  background: red !important;
+}

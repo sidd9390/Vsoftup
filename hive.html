@@ -1,0 +1,718 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>vsoft</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg d-flex justify-content-center pt-1 pb-1" style="background-color: #042f63; position: fixed; z-index: 10; width: 100%;">
+        <div class="container m-0">
+            <a href="./index.html"><img src="./assets/Images/Logo Proper White.png" style="width: 120px;" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse d-lg-flex justify-content-lg-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active ms-2 me-2" aria-current="page" href="./index.html#Home"
+                            style="color: white;">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link ms-2 me-2" href="./index.html#about_us" style="color: white;">About VSoft</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link ms-2 me-2" href="./index.html#managed_services" style="color: white;">Managed
+                            Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link ms-2 me-2" href="./index.html#data_center" style="color: white;">Data
+                            Center</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link ms-2 me-2" href="./index.html#data_security" style="color: white;">Data
+                            Security</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link ms-2 me-2" href="./index.html#Careers" style="color: white;">Careers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link ms-2 me-2" href="./index.html#contact_us" style="color: white;">Contact
+                            Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div id="carouselExampleIndicators" class="carousel slide">
+
+        <div class="carousel-indicators p-1 mb-5 ms-0 w-100" style="background: rgba( 0, 0, 0, 0.75 );">
+            <button type="button" data-bs-target="#carouselExampleIndicators" id="button1" data-bs-slide-to="0"
+                class="active d-none" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" id="button2" data-bs-slide-to="1"
+                class="d-none" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" id="button3" data-bs-slide-to="2"
+                class="d-none" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" id="button4" data-bs-slide-to="3"
+                class="d-none" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" id="button5" data-bs-slide-to="4"
+                class="d-none" aria-label="Slide 5"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" id="button6" data-bs-slide-to="5"
+                class="d-none" aria-label="Slide 6"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" id="button7" data-bs-slide-to="6"
+                class="d-none" aria-label="Slide 7"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" id="button8" data-bs-slide-to="7"
+                class="d-none" aria-label="Slide 8"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" id="button9" data-bs-slide-to="8"
+                class="d-none" aria-label="Slide 9"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" id="button10" data-bs-slide-to="9"
+                class="d-none" aria-label="Slide 10"></button>
+            <div class="navi text-center d-flex align-items-center pe-3 ps-3">
+                <i id="btnleft" style="cursor: pointer; color: #92c1fa; font-size: 40px;"
+                    class="fa-solid fa-caret-left"></i>
+            </div>
+            <div class="img-indi d-flex">
+                <a  style="text-decoration: none;" href="./index.html">
+                  <button onclick="handleButtonClick()" class="d-flex align-items-center ms-1 me-lg-5 pe-2"
+                  style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/vosoft_l.png" style="width: 120px; height: 70px; border-radius: 5px;" class="me-2"
+                    alt="">
+                  <h1 class="fs-5 fw-light" style="color: white;"> Home</h1>
+                </button>
+                </a>
+                <a  style="text-decoration: none;" href="./arya.html">
+                  <button onclick="handleButtonClick1()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                  style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Arya 3.jpg" style="width: 120px; height: 70px; border-radius: 5px;" class="me-2"
+                    alt="">
+                  <h1 class="fs-5 fw-light" style="color: white;"> Arya</h1>
+                </button>
+                </a>
+                <a  style="text-decoration: none;" href="./roots.html">
+                  <button onclick="handleButtonClick2()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                  style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Roots 1.jpg" style="width: 120px; height: 70px; border-radius: 5px;" class="me-2"
+                    alt="">
+                  <h1 class="fs-5 fw-light" style="color: white;"> Roots</h1>
+                </button>
+                </a>
+                <a  style="text-decoration: none;" href="./vantage.html">
+                  <button onclick="handleButtonClick3()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                  style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Vantage 1.jpg" style="width: 120px; height: 70px; border-radius: 5px;"
+                    class="me-2" alt="">
+                  <h1 class="fs-5 fw-light" style="color: white;"> Vantage</h1>
+                </button>
+                </a>
+                <a  style="text-decoration: none;" href="./bolt.html">
+                  <button onclick="handleButtonClick4()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                  style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Bolt 2.jpg" style="width: 120px; height: 70px; border-radius: 5px;" class="me-2"
+                    alt="">
+                  <h1 class="fs-5 fw-light" style="color: white;"> Bolt</h1>
+                </button>
+                </a>
+                <a  style="text-decoration: none;" href="./nest.html">
+                  <button onclick="handleButtonClick5()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                  style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Nest 2.jpg" style="width: 120px; height: 70px; border-radius: 5px;" class="me-2"
+                    alt="">
+                  <h1 class="fs-5 fw-light" style="color: white;"> Nest</h1>
+                </button>
+                </a>
+                <a  style="text-decoration: none;" href="./waves.html">
+                  <button onclick="handleButtonClick6()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                  style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/waves 7.jpg" style="width: 120px; height: 70px; border-radius: 5px;" class="me-2"
+                    alt="">
+                  <h1 class="fs-5 fw-light" style="color: white;"> Waves</h1>
+                </button>
+                </a>
+                <a  style="text-decoration: none;" href="./watch.html">
+                  <button onclick="handleButtonClick7()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                  style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Watch 2.jpg" style="width: 120px; height: 70px; border-radius: 5px;" class="me-2"
+                    alt="">
+                  <h1 class="fs-5 fw-light" style="color: white;"> Watch</h1>
+                </button>
+                </a>
+                <a  style="text-decoration: none;" href="./hive.html">
+                  <button onclick="handleButtonClick8()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                  style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Hive 8.jpg" style="width: 120px; height: 70px; border-radius: 5px;" class="me-2"
+                    alt="">
+                  <h1 class="fs-5 fw-light" style="color: white;"> Hive</h1>
+                </button>
+                </a>
+                <a  style="text-decoration: none;" href="./wings.html">
+                  <button onclick="handleButtonClick9()" class="d-flex align-items-center ms-5 me-1"
+                  style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Wings.jpg" style="width: 120px; height: 70px; border-radius: 5px;" class="me-2"
+                    alt="">
+                  <h1 class="fs-5 fw-light" style="color: white;"> Wings</h1>
+                </button>
+                </a>
+              </div>
+            <div class="navi text-center d-flex align-items-center pe-3 ps-3">
+                <i id="btnright" style="cursor: pointer; color: #92c1fa; font-size: 40px;"
+                    class="fa-solid fa-caret-right"></i>
+            </div>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item" style="position: relative;">
+              <img src="./assets/Images/2517-01.jpg" class="d-block w-100" style="height: 100vh; object-fit: cover;" alt="...">
+              <div class="" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100%;">
+                <div class="row d-flex justify-content-center">
+                  <div class="col-lg-8 col-12 text-center">
+                    <img src="./assets/Images/Logo Proper.png" class="img-fluid" style="width: 600px;" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item" style="position: relative;">
+              <img src="./assets/Images/Arya 3.jpg" class="d-block w-100" style="height: 100vh; object-fit: cover;" alt="...">
+              <div class="overlay_text">
+                <div class="row d-flex justify-content-center">
+                  <div class="col-8 text-center">
+                    <a style="cursor: pointer;" href="./arya.html">
+                      <img src="./assets/Images/Arya more red.png" class="img-fluid res_image" style="width: 500px;" alt=""></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item" style="position: relative;">
+              <img src="./assets/Images/Roots 1.jpg" class="d-block w-100" style="height: 100vh; object-fit: cover;" alt="...">
+              <div class="overlay_text">
+                <div class="row d-flex justify-content-center">
+                  <div class="col-8 text-center">
+                    <a href="./roots.html"><img src="./assets/Images/Roots-06.png" class="img-fluid res_image" style="width: 500px;" alt=""></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item" style="position: relative;">
+              <img src="./assets/Images/Vantage 1.jpg" class="d-block w-100" style="height: 100vh; object-fit: cover;"
+                alt="...">
+              <div class="overlay_text">
+                <div class="row d-flex justify-content-center">
+                  <div class="col-8 text-center">
+                    <a href="./vantage.html">
+                      <img src="./assets/Images/vantage.png" class="img-fluid res_image" style="width: 500px;" alt="">
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item" style="position: relative;">
+              <img src="./assets/Images/Bolt 2.jpg" class="d-block w-100" style="height: 100vh; object-fit: cover;" alt="...">
+              <div class="overlay_text">
+                <div class="row d-flex justify-content-center">
+                  <div class="col-8 text-center">
+                    <a href="./bolt.html">
+                      <img src="./assets/Images/bolt.png" class="img-fluid res_image" style="width: 500px;" alt="">
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item" style="position: relative;">
+              <img src="./assets/Images/Nest 2.jpg" class="d-block w-100" style="height: 100vh; object-fit: cover;" alt="...">
+              <div class="overlay_text">
+                <div class="row d-flex justify-content-center">
+                  <div class="col-8 text-center">
+                    <a href="./nest.html"><img src="./assets/Images/nest final.png" class="img-fluid res_image" style="width: 500px;" alt=""></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item" style="position: relative;">
+              <img src="./assets/Images/waves 7.jpg" class="d-block w-100" style="height: 100vh; object-fit: cover;" alt="...">
+              <div class="overlay_text">
+                <div class="row d-flex justify-content-center">
+                  <div class="col-8 text-center">
+                    <a href="./waves.html">
+                      <img src="./assets/Images/Waves Final Feb 3.png" class="img-fluid res_image" style="width: 500px;" alt="">
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item" style="position: relative;">
+              <img src="./assets/Images/Watch 2.jpg" class="d-block w-100" style="height: 100vh; object-fit: cover;" alt="...">
+              <div class="overlay_text">
+                <div class="row d-flex justify-content-center">
+                  <div class="col-8 text-center">
+                    <a href="./watch.html">
+                      <img src="./assets/Images/watch dark.png" class="img-fluid res_image" style="width: 500px;" alt="">
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item active" style="position: relative;">
+              <img src="./assets/Images/Hive 8.jpg" class="d-block w-100" style="height: 100vh; object-fit: cover;" alt="...">
+              <div class="overlay_text">
+                <div class="row d-flex justify-content-center">
+                  <div class="col-8 text-center">
+                    <a href="./hive.html">
+                      <img src="./assets/Images/hive_logo.png" class="img-fluid res_image" style="width: 500px;" alt="">
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item" style="position: relative;">
+              <img src="./assets/Images/Wings.jpg" class="d-block w-100" style="height: 100vh; object-fit: cover;" alt="...">
+              <div class="overlay_text">
+                <div class="row d-flex justify-content-center">
+                  <div class="col-8 text-center">
+                    <a href="./wings.html">
+                      <img src="./assets/Images/wings dark logo.png" class="img-fluid res_image" style="width: 500px;" alt="">
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+    <section class="Details pt-3 pb-3" id="Details" style="background-color: #f8e6cb;">
+        <div class="container">
+            <div class="row">
+                <h2 class="display-4  text-center mt-3" style="color: #e19a26;">Transform HR operations with Hive                </h2>
+                <div class="col-lg-6 col-12 p-4">
+                    <p class="m-0" style="text-align: justify;">Hive, a comprehensive Human Resources Management System (HRMS) designed to revolutionize how organizations manage their workforce. Hive provides a suite of powerful features and tools that streamline HR operations, enhance employee engagement, and drive organizational success. 
+                    </p>
+                </div>
+                <div class="col-lg-6 col-12 p-4">
+                    <p class="m-0" style="text-align: justify;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque
+                        velit quidem
+                        exercitationem provident hic aperiam, ipsam ad. Quam, itaque asperiores hic impedit architecto
+                        numquam beatae deleniti
+                        tempora, unde mollitia nobis?
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe laudantium dolores dolorem iusto
+                        quam? Consequuntur labore suscipit reiciendis qui exercitationem dicta alias quibusdam facilis
+                        vitae, ipsa modi enim expedita explicabo.</p>
+                </div>
+            </div>
+            <!-- <h2 class="mb-3 display-6 text-center">Key Features: </h2> -->
+
+            <section class="pt-2 pb-3">
+                <div class="container">
+                    <div class="row justify-content-center d-flex flex-row" style="position: relative;">
+                        <div class="col-6 d-flex d-lg-none d-block">
+                        </div>
+                        <div class="col-6 text-right d-flex justify-content-end d-lg-none d-block">
+                            <a class="btn btn-primary mb-3 me-1"
+                                style="background-color: transparent; border: 0; font-size: 20px; color: gray;"
+                                href="#carouselExample" role="button" data-slide="prev">
+                                <i class="fas fa-angle-left"></i>
+                            </a>
+                            <a class="btn btn-primary mb-3"
+                                style="background-color: transparent; border: 0; font-size: 20px; color: gray;"
+                                href="#carouselExample" role="button" data-slide="next">
+                                <i class="fas fa-angle-right"></i>
+                            </a>
+                        </div>
+                        <div class="col-1 d-lg-flex d-none justify-content-center align-items-center">
+                            <a class="btn btn-primary mb-3 me-1"
+                                style="background-color: transparent; border: 0; font-size: 40px; color: gray;"
+                                href="#carouselExample" role="button" data-slide="prev">
+                                <i class="fas fa-angle-left"></i>
+                            </a>
+                        </div>
+                        <div class="col-lg-10 col-12">
+                            <div id="carouselExample" class="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <h2 class="mb-3 display-6 text-center" style="color: antiquewhite;">.</h2>
+                                        <div class="row d-flex justify-content-center m-0">
+                                            <div class="col-lg-5 m-4 card p-0"
+                                                style="border-radius: 15px; border-top: 6px solid #e19a26; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
+                                                <div class="mt-3 text-center">
+                                                    <img src="./assets/Images/hlogo1.png" class="img-fluid"
+                                                        style="width: 100px;" alt="">
+                                                </div>
+                                                <div class="card-body p-4" style="height: 410px;">
+                                                    <h4 class="card-title display-6 fs-2" style="color: #e19a26;">
+                                                        Hive: elevating HR management</h4>
+                                                    <p class="card-text" style="text-align: justify;">Our comprehensive platform offers end-to-end support for all HR and Payroll processing needs, ensuring smooth operations and streamlined workforce management. The solution is designed specifically to cater to the unique needs of all types of organizations. With a web-based, multi-lingual, and centrally deployable platform, our software streamlines HR and Payroll operations, saving time and effort while ensuring accuracy and compliance. 
+
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <h2 class="mb-3 display-6 text-center">Key features and benefits</h2>
+                                        <div class="row d-flex justify-content-center m-0">
+                                            <div class="col-lg-5 m-4 card p-0"
+                                                style="border-radius: 15px; border-top: 6px solid #e19a26; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
+                                                <div class="mt-3 text-center">
+                                                    <img src="./assets/Images/hlogo2.png" class="img-fluid"
+                                                        style="width: 100px;" alt="">
+                                                </div>
+                                                <div class="card-body p-4" style="height: 410px;">
+                                                    <h4 class="card-title display-6 fs-2" style="color: #e19a26;">
+                                                        Talent acquisition and recruitment </h4>
+                                                    <p class="card-text" style="text-align: justify;">Streamline your recruitment process with Hive. Post job openings, manage applications, conduct interviews, and track candidate progress, ensuring a seamless and efficient hiring process.
+
+
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-5 m-4 card p-0"
+                                                style="border-radius: 15px; border-top: 6px solid #e19a26; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
+                                                <div class="mt-3 text-center">
+                                                    <img src="./assets/Images/hlogo3.png" class="img-fluid"
+                                                        style="width: 100px;" alt="">
+                                                </div>
+                                                <div class="card-body p-4">
+                                                    <h4 class="card-title display-6 fs-2" style="color: #e19a26;">
+                                                        Employee onboarding </h4>
+                                                    <p class="card-text" style="text-align: justify;">Welcome new employees with a comprehensive onboarding experience. Manage various types of employment, capture personal and employment details, track background verifications, assign training modules, and provide necessary resources, ensuring a smooth transition into the organization.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <h2 class="mb-3 display-6 text-center">Key features and benefits</h2>
+                                        <div class="row d-flex justify-content-center m-0">
+                                            <div class="col-lg-5 m-4 card p-0"
+                                                style="border-radius: 15px; border-top: 6px solid #e19a26; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
+                                                <div class="mt-3 text-center">
+                                                    <img src="./assets/Images/hlogo4.png" class="img-fluid"
+                                                        style="width: 100px;" alt="">
+                                                </div>
+                                                <div class="card-body p-4" style="height: 410px;">
+                                                    <h4 class="card-title display-6 fs-2" style="color: #e19a26;">
+                                                        Personnel Information System (PINS) </h4>
+                                                    <p class="card-text" style="text-align: justify;">Maintain a centralized employee database with Hive. Store and manage employee information, including personal details, employment history, charge hand overs certifications, and performance records.
+
+
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-5 m-4 card p-0"
+                                                style="border-radius: 15px; border-top: 6px solid #e19a26; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
+                                                <div class="mt-3 text-center">
+                                                    <img src="./assets/Images/hlogo5.png" class="img-fluid"
+                                                        style="width: 100px;" alt="">
+                                                </div>
+                                                <div class="card-body p-4">
+                                                    <h4 class="card-title display-6 fs-2" style="color: #e19a26;">
+                                                        Service register </h4>
+                                                    <p class="card-text" style="text-align: justify;">Track comprehensive employee details, appointments, promotions, suspensions, leave history, attendance, appraisals, achievements, and disciplinary actions.
+
+
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <h2 class="mb-3 display-6 text-center">Key features and benefits </h2>
+                                        <div class="row d-flex justify-content-center m-0">
+                                            <div class="col-lg-5 m-4 card p-0"
+                                                style="border-radius: 15px; border-top: 6px solid #e19a26; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
+                                                <div class="mt-3 text-center">
+                                                    <img src="./assets/Images/hlogo6.png" class="img-fluid"
+                                                        style="width: 100px;" alt="">
+                                                </div>
+                                                <div class="card-body p-4" style="height: 410px;">
+                                                    <h4 class="card-title display-6 fs-2" style="color: #e19a26;">
+                                                        Complete payroll  processing</h4>
+                                                    <p class="card-text" style="text-align: justify;">Streamlined pre-payroll and final payroll processing, ensuring accurate and timely salary calculations. Supplementary payroll processing for arrears, normal, and corrections.
+
+
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-5 m-4 card p-0"
+                                                style="border-radius: 15px; border-top: 6px solid #e19a26; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
+                                                <div class="mt-3 text-center">
+                                                    <img src="./assets/Images/hlogo7.png" class="img-fluid"
+                                                        style="width: 100px;" alt="">
+                                                </div>
+                                                <div class="card-body p-4" style="height: 410px;">
+                                                    <h4 class="card-title display-6 fs-2" style="color: #e19a26;">
+                                                        Performance management</h4>
+                                                    <p class="card-text" style="text-align: justify;">Drive performance excellence with Hive's performance management module. Set goals, conduct regular check-ins, and facilitate performance reviews, fostering a culture of continuous growth and development.
+                                                    </p>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <h2 class="mb-3 display-6 text-center">Key features and benefits </h2>
+                                        <div class="row d-flex justify-content-center m-0">
+                                            <div class="col-lg-5 m-4 card p-0"
+                                                style="border-radius: 15px; border-top: 6px solid #e19a26; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
+                                                <div class="mt-3 text-center">
+                                                    <img src="./assets/Images/hlogo8.png" class="img-fluid"
+                                                        style="width: 100px;" alt="">
+                                                </div>
+                                                <div class="card-body p-4" style="height: 410px;">
+                                                    <h4 class="card-title display-6 fs-2" style="color: #e19a26;">
+                                                        Leave management</h4>
+                                                    <p class="card-text" style="text-align: justify;">Simplify leave and attendance tracking with Hive. Configure various leave types, manage  cashable and carry-forward leaves, and control leave allocation based on grades, gender, and more. Employees can request leaves through mobile app or web, managers can approve or reject requests, and the system automatically updates attendance records, ensuring accuracy and compliance.
+
+
+
+
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-5 m-4 card p-0"
+                                                style="border-radius: 15px; border-top: 6px solid #e19a26; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
+                                                <div class="mt-3 text-center">
+                                                    <img src="./assets/Images/hlogo9.png" class="img-fluid"
+                                                        style="width: 100px;" alt="">
+                                                </div>
+                                                <div class="card-body p-4" style="height: 410px;">
+                                                    <h4 class="card-title display-6 fs-2" style="color: #e19a26;">
+                                                        Attendance management</h4>
+                                                    <p class="card-text" style="text-align: justify;">Support for biometric systems, track holidays, weekly-offs, leaves, and absences, generating daily and monthly reports. Attendance Register for calculating loss of pay and its impact on employee earnings.
+
+                                                    </p>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <h2 class="mb-3 display-6 text-center">Key features and benefits </h2>
+                                        <div class="row d-flex justify-content-center m-0">
+                                            <div class="col-lg-5 m-4 card p-0"
+                                                style="border-radius: 15px; border-top: 6px solid #e19a26; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
+                                                <div class="mt-3 text-center">
+                                                    <img src="./assets/Images/hlogo10.png" class="img-fluid"
+                                                        style="width: 100px;" alt="">
+                                                </div>
+                                                <div class="card-body p-4" style="height: 410px;">
+                                                    <h4 class="card-title display-6 fs-2" style="color: #e19a26;">
+                                                        Allowances and deductions</h4>
+                                                    <p class="card-text" style="text-align: justify;">Define and manage a wide range of allowances, deductions, and statutory rules to ensure compliance and fair salary processing.
+
+
+
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-5 m-4 card p-0"
+                                                style="border-radius: 15px; border-top: 6px solid #e19a26; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
+                                                <div class="mt-3 text-center">
+                                                    <img src="./assets/Images/hlogo11.png" class="img-fluid"
+                                                        style="width: 100px;" alt="">
+                                                </div>
+                                                <div class="card-body p-4" style="height: 410px;">
+                                                    <h4 class="card-title display-6 fs-2" style="color: #e19a26;">
+                                                        Advances and loans</h4>
+                                                    <p class="card-text" style="text-align: justify;">Advances and loans services offer essential financing options for individuals and businesses, including personal loans, business loans, and mortgages, each tailored to specific financial needs and circumstances.
+
+                                                    </p>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <h2 class="mb-3 display-6 text-center">Key features and benefits </h2>
+                                        <div class="row d-flex justify-content-center m-0">
+                                            <div class="col-lg-5 m-4 card p-0"
+                                                style="border-radius: 15px; border-top: 6px solid #e19a26; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
+                                                <div class="mt-3 text-center">
+                                                    <img src="./assets/Images/hlogo12.png" class="img-fluid"
+                                                        style="width: 100px;" alt="">
+                                                </div>
+                                                <div class="card-body p-4" style="height: 410px;">
+                                                    <h4 class="card-title display-6 fs-2" style="color: #e19a26;">
+                                                        Employee self service portal</h4>
+                                                    <p class="card-text" style="text-align: justify;">An Employee Self-Service Portal (ESSP) allows employees to manage tasks like pay stubs, personal info updates, time-off requests, benefits, and company policies, fostering efficiency and communication.
+
+
+
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-5 m-4 card p-0"
+                                                style="border-radius: 15px; border-top: 6px solid #e19a26; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
+                                                <div class="mt-3 text-center">
+                                                    <img src="./assets/Images/hlogo13.png" class="img-fluid"
+                                                        style="width: 100px;" alt="">
+                                                </div>
+                                                <div class="card-body p-4" style="height: 410px;">
+                                                    <h4 class="card-title display-6 fs-2" style="color: #e19a26;">
+                                                        Recruitment management</h4>
+                                                    <p class="card-text" style="text-align: justify;">Recruitment Management involves sourcing, screening, and hiring candidates for open positions, aiming to attract top talent and align skills with organizational needs.
+
+                                                    </p>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <h2 class="mb-3 display-6 text-center">Key features and benefits </h2>
+                                        <div class="row d-flex justify-content-center m-0">
+                                            
+                                            <div class="col-lg-5 m-4 card p-0"
+                                                style="border-radius: 15px; border-top: 6px solid #e19a26; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
+                                                <div class="mt-3 text-center">
+                                                    <img src="./assets/Images/hlogo14.png" class="img-fluid"
+                                                        style="width: 100px;" alt="">
+                                                </div>
+                                                <div class="card-body p-4" style="height: 410px;">
+                                                    <h4 class="card-title display-6 fs-2" style="color: #e19a26;">
+                                                        Travel module</h4>
+                                                    <p class="card-text" style="text-align: justify;">Schedule and track employee travel plans, ensuring efficient travel management.
+
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-5 m-4 card p-0"
+                                                style="border-radius: 15px; border-top: 6px solid #e19a26; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
+                                                <div class="mt-3 text-center">
+                                                    <img src="./assets/Images/hlogo15.png" class="img-fluid"
+                                                        style="width: 100px;" alt="">
+                                                </div>
+                                                <div class="card-body p-4" style="height: 410px;">
+                                                    <h4 class="card-title display-6 fs-2" style="color: #e19a26;">
+                                                        Remittances</h4>
+                                                    <p class="card-text" style="text-align: justify;">Track and verify payments, including PF, ESI, and loans, generating detailed reports for each deduction.
+
+
+
+                                                    </p>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <h2 class="mb-3 display-6 text-center">Key features and benefits </h2>
+                                        <div class="row d-flex justify-content-center m-0">
+                                            
+                                            <div class="col-lg-5 m-4 card p-0"
+                                                style="border-radius: 15px; border-top: 6px solid #e19a26; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
+                                                <div class="mt-3 text-center">
+                                                    <img src="./assets/Images/hlogo16.png" class="img-fluid"
+                                                        style="width: 100px;" alt="">
+                                                </div>
+                                                <div class="card-body p-4" style="height: 410px;">
+                                                    <h4 class="card-title display-6 fs-2" style="color: #e19a26;">
+                                                        Performance management</h4>
+                                                    <p class="card-text" style="text-align: justify;">Customizable appraisal letter templates for bulk generation. Set appraisal frequency and rules and facilitate self-appraisals and multi-level reviews. Set goals, conduct regular performance evaluations, and facilitate constructive feedback to drive employee growth and performance.
+
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-5 m-4 card p-0"
+                                                style="border-radius: 15px; border-top: 6px solid #e19a26; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
+                                                <div class="mt-3 text-center">
+                                                    <img src="./assets/Images/hlogo17.png" class="img-fluid"
+                                                        style="width: 100px;" alt="">
+                                                </div>
+                                                <div class="card-body p-4" style="height: 410px;">
+                                                    <h4 class="card-title display-6 fs-2" style="color: #e19a26;">
+                                                        Leave and attendance management</h4>
+                                                    <p class="card-text" style="text-align: justify;">Automate leave requests, approvals, and attendance tracking, ensuring accuracy and compliance.
+
+
+                                                    </p>
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <h2 class="mb-3 display-6 text-center">Key features and benefits </h2>
+                                        <div class="row d-flex justify-content-center m-0">
+                                            <div class="col-lg-5 m-4 card p-0"
+                                                style="border-radius: 15px; border-top: 6px solid #e19a26; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
+                                                <div class="mt-3 text-center">
+                                                    <img src="./assets/Images/hlogo18.png" class="img-fluid"
+                                                        style="width: 100px;" alt="">
+                                                </div>
+                                                <div class="card-body p-4" style="height: 410px;">
+                                                    <h4 class="card-title display-6 fs-2" style="color: #e19a26;">
+                                                        Training and development</h4>
+                                                    <p class="card-text" style="text-align: justify;">Assign, enroll, track, and manage employee training programs and skill development initiatives.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-5 m-4 card p-0"
+                                                style="border-radius: 15px; border-top: 6px solid #e19a26; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
+                                                <div class="mt-3 text-center">
+                                                    <img src="./assets/Images/hlogo19.png" class="img-fluid"
+                                                        style="width: 100px;" alt="">
+                                                </div>
+                                                <div class="card-body p-4" style="height: 410px;">
+                                                    <h4 class="card-title display-6 fs-2" style="color: #e19a26;">
+                                                        Reports/MIS</h4>
+                                                    <p class="card-text" style="text-align: justify;">Generate a wide range of reports for various modules, alerting users to leave applications, contract expiry, and other important events.
+
+
+
+                                                    </p>
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+                                    
+
+                                    <div class="carousel-item">
+                                        <h2 class="mb-3 display-6 text-center" style="color: #f8e6cb;">.</h2>
+                                        <div class="row d-flex justify-content-center m-0">
+                                            <div class="col-lg-5 m-4 card p-0"
+                                                style="border-radius: 15px; border-top: 6px solid #e19a26; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
+                                                <div class="mt-3 text-center">
+                                                    <img src="./assets/Images/hlogo20.png" class="img-fluid"
+                                                        style="width: 100px;" alt="">
+                                                </div>
+                                                <div class="card-body p-4" style="height: 410px;">
+                                                    <h4 class="card-title display-6 fs-2" style="color: #e19a26;">
+                                                        Experience the power of Hive</h4>
+                                                    <p class="card-text" style="text-align: justify;">Join leading organizations in embracing Hive to streamline HR operations, enhance employee engagement, and drive organizational success. Contact us today to learn more about Hive and how it can transform your HR department.
+                                                        Empower your organization with our highly parameterized and customizable HR and Payroll system.
+                                                        
+
+
+
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-1 d-lg-flex d-none justify-content-center align-items-center">
+                            <a class="btn btn-primary mb-3"
+                                style="background-color: transparent; border: 0; font-size: 40px; color: gray;"
+                                href="#carouselExample" role="button" data-slide="next">
+                                <i class="fas fa-angle-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+    </section>
+    <!-- Include jQuery from a CDN -->
+    <script src="./assets/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

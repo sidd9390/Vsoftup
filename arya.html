@@ -1,0 +1,601 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>vsoft</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+      #scrollSection {
+        position: absolute;
+        z-index: 10;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.75);
+        overflow-x: hidden;
+        width: 100vw;
+        /* Ensures the section takes up the full viewport width */
+      }
+    
+      .scroller {
+        overflow: hidden;
+        /* Hides any content that overflows the container */
+      }
+    
+      .scroller__inner {
+        display: flex;
+        /* Ensures all buttons stay in a single line */
+      }
+    
+      .custom-carousel {
+        position: relative;
+        max-width: 100%;
+        overflow: hidden;
+      }
+    
+      .carousel-container {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+      }
+    
+      .carousel-slide {
+        flex: 0 0 100%;
+      }
+    
+      .custom-carousel-indicators {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+      }
+    
+      .custom-carousel-indicator {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #999;
+        margin: 0 5px;
+      }
+    
+      .custom-carousel-indicator.active {
+        background-color: #333;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg d-flex justify-content-center pt-1 pb-1"
+    style="background-color: #042f63; position: fixed; z-index: 99; width: 100%;"
+      >
+      <div class="container m-0">
+        <a href="./index.html"><img src="./assets/Images/Logo Proper White.png" style="width: 120px;" alt=""></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse d-lg-flex justify-content-lg-end" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active ms-2 me-2" aria-current="page" href="./index.html#Home" style="color: white;">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link ms-2 me-2" href="./index.html#about_us" style="color: white;">About VSoft</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link ms-2 me-2" href="./index.html#managed_services" style="color: white;">Managed Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link ms-2 me-2" href="./index.html#data_center" style="color: white;">Data Center</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link ms-2 me-2" href="./index.html#data_security" style="color: white;">Data Security</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link ms-2 me-2" href="./index.html#Careers" style="color: white;">Careers</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link ms-2 me-2" href="./index.html#contact_us" style="color: white;">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="custom-carousel">
+      <div class="carousel-container">
+        
+        <div class="carousel-slide" style="position: relative;">
+          <video controls loop autoplay muted class="d-block w-100" style="height: 100vh; object-fit: cover;">
+            <source src="./assets/Images/Roots 30sec film-.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <!-- <div class="overlay_text">
+            <div class="row d-flex justify-content-center">
+              <div class="col-8 text-center">
+                <a href="./roots.html">
+                  <img src="./assets/Images/Roots-06.png" class="img-fluid res_image" style="width: 500px;" alt="">
+                </a>
+              </div>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </div>
+    <section class="mb-lg-4 mb-2" id="scrollSection">
+        <div class="scroller" data-direction="left" data-speed="slow">
+          <div class="scroller__inner pt-1 pb-1">
+            <div class="img-indi d-flex">
+              <a style="text-decoration: none;" href="./index.html">
+                <button onclick="handleButtonClick()" class="d-flex align-items-center ms-1 me-lg-5 pe-2"
+                  style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/vosoft_l.png"
+                    style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                  <h1 class="fs-5 fw-light" style="color: white;"> Home</h1>
+                </button>
+              </a>
+              <a style="text-decoration: none;" href="./arya.html">
+                <button onclick="handleButtonClick1()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                  style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Arya 3.jpg"
+                    style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                  <h1 class="fs-5 fw-light" style="color: white;"> Arya</h1>
+                </button>
+              </a>
+              <a style="text-decoration: none;" href="./roots.html">
+                <button onclick="handleButtonClick2()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                  style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Roots 1.jpg"
+                    style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                  <h1 class="fs-5 fw-light" style="color: white;"> Roots</h1>
+                </button>
+              </a>
+              <a style="text-decoration: none;" href="./vantage.html">
+                <button onclick="handleButtonClick3()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                  style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Vantage 1.jpg"
+                    style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                  <h1 class="fs-5 fw-light" style="color: white;"> Vantage</h1>
+                </button>
+              </a>
+              <a style="text-decoration: none;" href="./bolt.html">
+                <button onclick="handleButtonClick4()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                  style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Bolt 2.jpg"
+                    style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                  <h1 class="fs-5 fw-light" style="color: white;"> Bolt</h1>
+                </button>
+              </a>
+              <a style="text-decoration: none;" href="./nest.html">
+                <button onclick="handleButtonClick5()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                  style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Nest 2.jpg"
+                    style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                  <h1 class="fs-5 fw-light" style="color: white;"> Nest</h1>
+                </button>
+              </a>
+              <a style="text-decoration: none;" href="./waves.html">
+                <button onclick="handleButtonClick6()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                  style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/waves 7.jpg"
+                    style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                  <h1 class="fs-5 fw-light" style="color: white;"> Waves</h1>
+                </button>
+              </a>
+              <a style="text-decoration: none;" href="./watch.html">
+                <button onclick="handleButtonClick7()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                  style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Watch 2.jpg"
+                    style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                  <h1 class="fs-5 fw-light" style="color: white;"> Watch</h1>
+                </button>
+              </a>
+              <a style="text-decoration: none;" href="./hive.html">
+                <button onclick="handleButtonClick8()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                  style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Hive 8.jpg"
+                    style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                  <h1 class="fs-5 fw-light" style="color: white;"> Hive</h1>
+                </button>
+              </a>
+              <a style="text-decoration: none;" href="./wings.html">
+                <button onclick="handleButtonClick9()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                  style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Wings.jpg"
+                    style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                  <h1 class="fs-5 fw-light" style="color: white;"> Wings</h1>
+                </button>
+              </a>
+              <a style="text-decoration: none;" href="./index.html">
+                <button onclick="handleButtonClick()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                  style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/vosoft_l.png"
+                    style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                  <h1 class="fs-5 fw-light" style="color: white;"> Home</h1>
+                </button>
+              </a>
+              <a style="text-decoration: none;" href="./arya.html">
+                <button onclick="handleButtonClick1()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                  style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Arya 3.jpg"
+                    style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                  <h1 class="fs-5 fw-light" style="color: white;"> Arya</h1>
+                </button>
+              </a>
+              <a style="text-decoration: none;" href="./roots.html">
+                <button onclick="handleButtonClick2()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                  style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Roots 1.jpg"
+                    style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                  <h1 class="fs-5 fw-light" style="color: white;"> Roots</h1>
+                </button>
+              </a>
+              <a style="text-decoration: none;" href="./vantage.html">
+                <button onclick="handleButtonClick3()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                  style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Vantage 1.jpg"
+                    style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                  <h1 class="fs-5 fw-light" style="color: white;"> Vantage</h1>
+                </button>
+              </a>
+              <a style="text-decoration: none;" href="./bolt.html">
+                <button onclick="handleButtonClick4()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                  style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Bolt 2.jpg"
+                    style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                  <h1 class="fs-5 fw-light" style="color: white;"> Bolt</h1>
+                </button>
+              </a>
+              <a style="text-decoration: none;" href="./nest.html">
+                <button onclick="handleButtonClick5()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                  style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Nest 2.jpg"
+                    style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                  <h1 class="fs-5 fw-light" style="color: white;"> Nest</h1>
+                </button>
+              </a>
+              <a style="text-decoration: none;" href="./waves.html">
+                <button onclick="handleButtonClick6()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                  style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/waves 7.jpg"
+                    style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                  <h1 class="fs-5 fw-light" style="color: white;"> Waves</h1>
+                </button>
+              </a>
+              <a style="text-decoration: none;" href="./watch.html">
+                <button onclick="handleButtonClick7()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                  style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Watch 2.jpg"
+                    style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                  <h1 class="fs-5 fw-light" style="color: white;"> Watch</h1>
+                </button>
+              </a>
+              <a style="text-decoration: none;" href="./hive.html">
+                <button onclick="handleButtonClick8()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                  style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Hive 8.jpg"
+                    style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                  <h1 class="fs-5 fw-light" style="color: white;"> Hive</h1>
+                </button>
+              </a>
+              <a style="text-decoration: none;" href="./wings.html">
+                <button onclick="handleButtonClick9()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                  style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Wings.jpg"
+                    style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                  <h1 class="fs-5 fw-light" style="color: white;"> Wings</h1>
+                </button>
+              </a>
+              <a style="text-decoration: none;" href="./index.html">
+                <button onclick="handleButtonClick()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                  style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/vosoft_l.png"
+                    style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                  <h1 class="fs-5 fw-light" style="color: white;"> Home</h1>
+                </button>
+              </a>
+              <a style="text-decoration: none;" href="./arya.html">
+                <button onclick="handleButtonClick1()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                  style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Arya 3.jpg"
+                    style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                  <h1 class="fs-5 fw-light" style="color: white;"> Arya</h1>
+                </button>
+              </a>
+              <a style="text-decoration: none;" href="./roots.html">
+                <button onclick="handleButtonClick2()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                  style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Roots 1.jpg"
+                    style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                  <h1 class="fs-5 fw-light" style="color: white;"> Roots</h1>
+                </button>
+              </a>
+              <a style="text-decoration: none;" href="./vantage.html">
+                <button onclick="handleButtonClick3()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                  style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Vantage 1.jpg"
+                    style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                  <h1 class="fs-5 fw-light" style="color: white;"> Vantage</h1>
+                </button>
+              </a>
+              <a style="text-decoration: none;" href="./bolt.html">
+                <button onclick="handleButtonClick4()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                  style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Bolt 2.jpg"
+                    style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                  <h1 class="fs-5 fw-light" style="color: white;"> Bolt</h1>
+                </button>
+              </a>
+              <a style="text-decoration: none;" href="./nest.html">
+                <button onclick="handleButtonClick5()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                  style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Nest 2.jpg"
+                    style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                  <h1 class="fs-5 fw-light" style="color: white;"> Nest</h1>
+                </button>
+              </a>
+              <a style="text-decoration: none;" href="./waves.html">
+                <button onclick="handleButtonClick6()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                  style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/waves 7.jpg"
+                    style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                  <h1 class="fs-5 fw-light" style="color: white;"> Waves</h1>
+                </button>
+              </a>
+              <a style="text-decoration: none;" href="./watch.html">
+                <button onclick="handleButtonClick7()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                  style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Watch 2.jpg"
+                    style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                  <h1 class="fs-5 fw-light" style="color: white;"> Watch</h1>
+                </button>
+              </a>
+              <a style="text-decoration: none;" href="./hive.html">
+                <button onclick="handleButtonClick8()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                  style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Hive 8.jpg"
+                    style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                  <h1 class="fs-5 fw-light" style="color: white;"> Hive</h1>
+                </button>
+              </a>
+              <a style="text-decoration: none;" href="./wings.html">
+                <button onclick="handleButtonClick9()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                  style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Wings.jpg"
+                    style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                  <h1 class="fs-5 fw-light" style="color: white;"> Wings</h1>
+                </button>
+              </a>
+            </div>
+          </div>
+      </div>
+    </section>
+    <section class="Details pt-3 pb-3" id="Details" style="background-color: #fdf2ed;">
+        <div class="container">
+            <div class="row">
+                <h2 class="display-4  text-center mt-3" style="color: #ee6522;">Embrance the future of digital banking</h2>
+                <div class="col-lg-6 col-12 p-4">
+                    <p style="text-align: justify;" class="m-0">Arya is seamlessly accessible banking across all devices. Utilizes SMAC tech for consistency and intuitive navigation. Optimizes features with analytics for personalized service. Prioritizes security, satisfaction, and engagement through voice assistants and multiple bots, elevating digital banking standards.</p>
+                </div>
+                <div class="col-lg-6 col-12 p-4">
+                    <p style="text-align: justify;" class="m-0">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque velit quidem
+                      exercitationem provident hic aperiam, ipsam ad. Quam, itaque asperiores hic impedit architecto numquam beatae deleniti
+                      tempora, unde mollitia nobis?
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe laudantium dolores dolorem iusto quam? Consequuntur labore suscipit reiciendis qui exercitationem dicta alias quibusdam facilis vitae, ipsa modi enim expedita explicabo.</p>
+                </div>
+            </div>
+            <!-- <h2 class="mb-3 display-6 text-center">Key features </h2> -->
+
+            <section class="pt-2 pb-3">
+              <div class="container">
+                <div class="row justify-content-center d-flex flex-row" style="position: relative;">
+                  <div class="col-6 d-flex d-lg-none d-block">
+                  </div>
+                  <div class="col-6 text-right d-flex justify-content-end d-lg-none d-block">
+                    <a class="btn btn-primary mb-3 me-1" style="background-color: transparent; border: 0; font-size: 20px; color: gray;" href="#carouselExample"
+                      role="button" data-slide="prev">
+                      <i class="fas fa-angle-left"></i>
+                    </a>
+                    <a class="btn btn-primary mb-3" style="background-color: transparent; border: 0; font-size: 20px; color: gray;" href="#carouselExample"
+                      role="button" data-slide="next">
+                      <i class="fas fa-angle-right"></i>
+                    </a>
+                  </div>
+                  <div class="col-1 d-lg-flex d-none justify-content-center align-items-center">
+                    <a class="btn btn-primary mb-3 me-1" style="background-color: transparent; border: 0; font-size: 40px; color: gray;"
+                      href="#carouselExample" role="button" data-slide="prev">
+                      <i class="fas fa-angle-left"></i>
+                    </a>
+                  </div>
+                  <div class="col-lg-10 col-12">
+                    <div id="carouselExample" class="carousel">
+                      <div class="carousel-inner">
+                        <div class="carousel-item active">
+                          <h2 class="display-6 text-center m-0" style="color: antiquewhite;">.</h2>
+                          <div class="row d-flex justify-content-center m-0">
+                            <div class="col-lg-5 m-4 card p-0"
+                              style="border-radius: 15px; border-top: 6px solid #ee6522; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
+                              <div class="mt-3 text-center">
+                                <img src="./assets/Images/slogo_1.png"  class="img-fluid" style="width: 100px;" alt="">
+                              </div>
+                              <div class="card-body" style="height: 330px;">
+                                <h4 class="card-title display-6 fs-3" style="color: #ee6522;">Experience banking like never before </h4>
+                                <p class="card-text" style="text-align: justify;">Arya Digital Banking is your customer’s gateway to a seamless,
+                                  secure, and efficient banking
+                                  experience. Arya brings the power of technology to your customers fingertips, revolutionizing the way they manage
+                                  their finances.
+                                </p>
+                              </div>
+                            </div>
+                            <div class="col-lg-5 m-4 card p-0"
+                              style="border-radius: 15px; border-top: 6px solid #ee6522; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
+                              <div class="mt-3 text-center">
+                                <img src="./assets/Images/slogo_2.png" class="img-fluid" style="width: 100px;" alt="">
+                              </div>
+                              <div class="card-body p-4">
+                                <h4 class="card-title display-6 fs-3" style="color: #ee6522;">Redefining digital banking </h4>
+                                <p class="card-text" style="text-align: justify;">Arya revolutionizes the way your customers bank, bringing convenience,
+                                  security, and efficiency
+                                  to their fingertips. With Arya, your customers experience a range of advanced banking services and seamless digital
+                                  interactions, ensuring they are always in control of their finances, in turn benefitting your Bank. </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="carousel-item">
+                          <h2 class="m-0 display-6 text-center" style="margin: 0px;">Key features </h2>
+                          <div class="row d-flex justify-content-center m-0">
+                            <div class="col-lg-5 m-4 card p-0"
+                              style="border-radius: 15px; border-top: 6px solid #ee6522; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
+                              <div class="mt-3 text-center">
+                                <img src="./assets/Images/slogo_3.png" class="img-fluid" style="width: 100px;" alt="">
+                              </div>
+                              <div class="card-body p-4" style="height: 330px;">
+                                <h4 class="card-title display-6 fs-3" style="color: #ee6522;">Anytime, anywhere banking </h4>
+                                <p class="card-text" style="text-align: justify;">With Arya Digital Banking, customers have 24/7 access to their
+                                  accounts, allowing them to bank anytime and anywhere, using a computer, smartphone, or tablet.
+                                </p>
+                              </div>
+                              </div>
+                              <div class="col-lg-5 m-4 card p-0"
+                                style="border-radius: 15px; border-top: 6px solid #ee6522; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
+                                <div class="mt-3 text-center">
+                                  <img src="./assets/Images/slogo_4.png" class="img-fluid" style="width: 100px;" alt="">
+                                </div>
+                                <div class="card-body p-4">
+                                  <h4 class="card-title display-6 fs-3" style="color: #ee6522;">User-friendly interface </h4>
+                                  <p class="card-text" style="text-align: justify;">Arya’s intuitive and user-friendly interface ensures navigation
+                                    through the CORE banking system effortlessly. Whether checking account balance, making transfers, or paying bills,
+                                    Arya makes it simple and convenient. </p>
+                                </div>
+                              </div>
+                              </div>
+                              </div>
+                              <div class="carousel-item">
+                                <h2 class="m-0 display-6 text-center">Key features </h2>
+                                <div class="row d-flex justify-content-center m-0">
+                                  <div class="col-lg-5 m-4 card p-0"
+                                    style="border-radius: 15px; border-top: 6px solid #ee6522; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
+                                    <div class="mt-3 text-center">
+                                      <img src="./assets/Images/slogo_5.png" class="img-fluid" style="width: 100px;" alt="">
+                                    </div>
+                                    <div class="card-body p-4" style="height: 330px;">
+                                      <h4 class="card-title display-6 fs-3" style="color: #ee6522;">Account management made easy </h4>
+                                      <p class="card-text" style="text-align: justify;">Arya provides a comprehensive suite of account management
+                                        tools. One can view transaction history, set up automatic payments, and monitor spending habits along with
+                                        with detailed statements and reports.
+                                      </p>
+                                    </div>
+                                  </div>
+                                  <div class="col-lg-5 m-4 card p-0"
+                                    style="border-radius: 15px; border-top: 6px solid #ee6522; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
+                                    <div class="mt-3 text-center">
+                                      <img src="./assets/Images/slogo_6.png" class="img-fluid" style="width: 100px;" alt="">
+                                    </div>
+                              <div class="card-body p-4">
+                                <h4 class="card-title display-6 fs-3" style="color: #ee6522;">Digital payments </h4>
+                                <p class="card-text" style="text-align: justify;">Customers can make secure and instant payments using Arya's integrated
+                                  digital payment solution; Pay bills, transfer funds, and make purchases seamlessly, all within the app.
+                                </p>
+                                </div>
+                                </div>
+                                </div>
+                                </div>
+                                <div class="carousel-item">
+                                  <h2 class="m-0 display-6 text-center">Key features </h2>
+                                  <div class="row d-flex justify-content-center m-0">
+                                    <div class="col-lg-5 m-4 card p-0"
+                                      style="border-radius: 15px; border-top: 6px solid #ee6522; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
+                                      <div class="mt-3 text-center">
+                                        <img src="./assets/Images/slogo_7.png" class="img-fluid" style="width: 100px;" alt="">
+                                      </div>
+                                      <div class="card-body p-4" style="height: 330px;">
+                                        <h4 class="card-title display-6 fs-3" style="color: #ee6522;">Secure transactions </h4>
+                                        <p class="card-text" style="text-align: justify;">Arya has been architected keeping the Bank’s financial
+                                          information safety in mind. Arya incorporates advanced security measures, including encryption and
+                                          multi-factor authentication, to ensure that the transactions are secure and customer data remains protected.
+                                        </p>
+                                      </div>
+                                    </div>
+                                    <div class="col-lg-5 m-4 card p-0"
+                                      style="border-radius: 15px; border-top: 6px solid #ee6522; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
+                                      <div class="mt-3 text-center">
+                                        <img src="./assets/Images/slogo_8.png" class="img-fluid" style="width: 100px;" alt="">
+                                      </div>
+                                      <div class="card-body p-4">
+                                        <h4 class="card-title display-6 fs-3" style="color: #ee6522;">Personalized services </h4>
+                                        <p class="card-text" style="text-align: justify;">Arya provides tailored services to meet individual needs of
+                                          customers. One can Customize the banking experience by setting up notifications, alerts, and reminders that
+                                          suit customer preferences.
+                                        </p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="carousel-item">
+                                  <h2 class="m-0 display-6 text-center">Key features </h2>
+                                  <div class="row d-flex justify-content-center m-0">
+                                    <div class="col-lg-5 m-4 card p-0"
+                                      style="border-radius: 15px; border-top: 6px solid #ee6522; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
+                                      <div class="mt-3 text-center">
+                                        <img src="./assets/Images/slogo_9.png" class="img-fluid" style="width: 100px;" alt="">
+                                      </div>
+                                      <div class="card-body p-4" style="height: 330px;">
+                                        <h4 class="card-title display-6 fs-3" style="color: #ee6522;">Innovative tools </h4>
+                                        <p class="card-text" style="text-align: justify;">Explore a range of innovative tools and features designed to enhance the customer experience in financial management
+                                        </p>
+                                      </div>
+                                    </div>
+                                
+                                  </div>
+                                </div>
+                                <div class="carousel-item">
+                                  <h2 class="m-0 display-6 text-center">Arya modules</h2>
+                                  <div class="row d-flex justify-content-center m-0">
+                                    <div class="col-lg-5 m-4 card p-0"
+                                      style="border-radius: 15px; border-top: 6px solid #ee6522; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
+                                      <div class="mt-3 text-center">
+                                        <img src="./assets/Images/slogo_10.png" class="img-fluid" style="width: 100px;" alt="">
+                                      </div>
+                                      <div class="card-body p-4" style="height: 330px;">
+                                        <h4 class="card-title display-6 fs-3" style="color: #ee6522;">Account dashboard </h4>
+                                        <p class="card-text" style="text-align: justify;">Provides a comprehensive overview of all the customer’s
+                                          accounts, transactions, and financial activities in one place.It facilitates managing and monitoring of
+                                          accounts effortlessly by customers.
+                                </p>
+                              </div>
+                            </div>
+                            <div class="col-lg-5 m-4 card p-0"
+                              style="border-radius: 15px; border-top: 6px solid #ee6522; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
+                              <div class="mt-3 text-center">
+                                <img src="./assets/Images/slogo_11.png" class="img-fluid" style="width: 100px;" alt="">
+                              </div>
+                              <div class="card-body p-4">
+                                <h4 class="card-title display-6 fs-3" style="color: #ee6522;">Payments and transfers </h4>
+                                <p class="card-text" style="text-align: justify;">Initiate instant payments, transfers, and schedule transactions.
+                                  Seamlessly transfer funds between accounts, to other banks, or make payments to merchants and billers.
+                                </p>
+                                </div>
+                                </div>
+                                </div>
+                                </div>
+                                <div class="carousel-item">
+                                  <h2 class="m-0 display-6 text-center">Arya modules</h2>
+                                  <div class="row d-flex justify-content-center m-0">
+                                    <div class="col-lg-5 m-4 card p-0"
+                                      style="border-radius: 15px; border-top: 6px solid #ee6522; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
+                                      <div class="mt-3 text-center">
+                                        <img src="./assets/Images/slogo_12.png" class="img-fluid" style="width: 100px;" alt="">
+                                      </div>
+                                      <div class="card-body p-4" style="height: 330px;">
+                                        <h4 class="card-title display-6 fs-3" style="color: #ee6522;">Secure authentication </h4>
+                                        <p class="card-text" style="text-align: justify;">Arya ensures the highest level of security with multi-factor
+                                          authentication and biometric login options, keeping all the financial information safe and protected.
+                                        </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-1 d-lg-flex d-none justify-content-center align-items-center">
+                    <a class="btn btn-primary mb-3" style="background-color: transparent; border: 0; font-size: 40px; color: gray;" href="#carouselExample"
+                      role="button" data-slide="next">
+                      <i class="fas fa-angle-right"></i>
+                    </a>
+                  </div>
+                </div>
+                <div class="row">
+                  <h2 class="display-4  pt-3 text-center" style="color: #ee6522;">Experience Arya today</h2>
+                  <div class="col-lg-12 col-12 p-4">
+                    <p style="text-align: justify;">Join leading banks across India in embracing Arya and providing your customers with
+                      a truly digital banking experience. Stay ahead of the curve and transform the way of your customers bank with you.
+                      Contact us today to learn more about Arya and how it can elevate your bank's digital capabilities and your
+                      customer’s experience.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            </div>
+            
+            </section>
+            <!-- Include jQuery from a CDN -->
+    <script src="./assets/js/script2.js"></script>
+    <script src="./assets/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </body>
+</html>

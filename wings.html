@@ -1,0 +1,679 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>vsoft</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <style>
+          #scrollSection {
+            position: absolute;
+            z-index: 10;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.75);
+            overflow-x: hidden;
+            width: 100vw;
+            /* Ensures the section takes up the full viewport width */
+          }
+        
+          .scroller {
+            overflow: hidden;
+            /* Hides any content that overflows the container */
+          }
+        
+          .scroller__inner {
+            display: flex;
+            /* Ensures all buttons stay in a single line */
+          }
+        
+          .custom-carousel {
+            position: relative;
+            max-width: 100%;
+            overflow: hidden;
+          }
+        
+          .carousel-container {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+          }
+        
+          .carousel-slide {
+            flex: 0 0 100%;
+          }
+        
+          .custom-carousel-indicators {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+          }
+        
+          .custom-carousel-indicator {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #999;
+            margin: 0 5px;
+          }
+        
+          .custom-carousel-indicator.active {
+            background-color: #333;
+          }
+        </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg d-flex justify-content-center pt-1 pb-1" style="background-color: #042f63; position: fixed; z-index: 99; width: 100%;">
+        <div class="container m-0">
+            <a href="./index.html"><img src="./assets/Images/Logo Proper White.png" style="width: 120px;" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse d-lg-flex justify-content-lg-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active ms-2 me-2" aria-current="page" href="./index.html#Home"
+                            style="color: white;">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link ms-2 me-2" href="./index.html#about_us" style="color: white;">About VSoft</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link ms-2 me-2" href="./index.html#managed_services" style="color: white;">Managed
+                            Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link ms-2 me-2" href="./index.html#data_center" style="color: white;">Data
+                            Center</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link ms-2 me-2" href="./index.html#data_security" style="color: white;">Data
+                            Security</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link ms-2 me-2" href="./index.html#Careers" style="color: white;">Careers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link ms-2 me-2" href="./index.html#contact_us" style="color: white;">Contact
+                            Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="custom-carousel">
+      <div class="carousel-container">
+        
+        <div class="carousel-slide" style="position: relative;">
+          <video controls loop autoplay class="d-block w-100" style="height: 100vh; object-fit: cover;">
+            <source src="./assets/Images/Wings(30sec).mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <!-- <div class="overlay_text">
+            <div class="row d-flex justify-content-center">
+              <div class="col-8 text-center">
+                <a href="./roots.html">
+                  <img src="./assets/Images/Roots-06.png" class="img-fluid res_image" style="width: 500px;" alt="">
+                </a>
+              </div>
+            </div>
+          </div> -->
+        </div>
+        
+        
+      </div>
+    </div>
+    <section class="mb-lg-2 mb-2" id="scrollSection">
+      <div class="scroller" data-direction="left" data-speed="slow">
+        <div class="scroller__inner pt-1 pb-1">
+          <div class="img-indi d-flex">
+            <a style="text-decoration: none;" href="./index.html">
+              <button onclick="handleButtonClick()" class="d-flex align-items-center ms-1 me-lg-5 pe-2"
+                style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/vosoft_l.png"
+                  style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                <h1 class="fs-5 fw-light" style="color: white;"> Home</h1>
+              </button>
+            </a>
+            <a style="text-decoration: none;" href="./arya.html">
+              <button onclick="handleButtonClick1()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Arya 3.jpg"
+                  style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                <h1 class="fs-5 fw-light" style="color: white;"> Arya</h1>
+              </button>
+            </a>
+            <a style="text-decoration: none;" href="./roots.html">
+              <button onclick="handleButtonClick2()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Roots 1.jpg"
+                  style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                <h1 class="fs-5 fw-light" style="color: white;"> Roots</h1>
+              </button>
+            </a>
+            <a style="text-decoration: none;" href="./vantage.html">
+              <button onclick="handleButtonClick3()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Vantage 1.jpg"
+                  style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                <h1 class="fs-5 fw-light" style="color: white;"> Vantage</h1>
+              </button>
+            </a>
+            <a style="text-decoration: none;" href="./bolt.html">
+              <button onclick="handleButtonClick4()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Bolt 2.jpg"
+                  style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                <h1 class="fs-5 fw-light" style="color: white;"> Bolt</h1>
+              </button>
+            </a>
+            <a style="text-decoration: none;" href="./nest.html">
+              <button onclick="handleButtonClick5()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Nest 2.jpg"
+                  style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                <h1 class="fs-5 fw-light" style="color: white;"> Nest</h1>
+              </button>
+            </a>
+            <a style="text-decoration: none;" href="./waves.html">
+              <button onclick="handleButtonClick6()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/waves 7.jpg"
+                  style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                <h1 class="fs-5 fw-light" style="color: white;"> Waves</h1>
+              </button>
+            </a>
+            <a style="text-decoration: none;" href="./watch.html">
+              <button onclick="handleButtonClick7()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Watch 2.jpg"
+                  style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                <h1 class="fs-5 fw-light" style="color: white;"> Watch</h1>
+              </button>
+            </a>
+            <a style="text-decoration: none;" href="./hive.html">
+              <button onclick="handleButtonClick8()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Hive 8.jpg"
+                  style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                <h1 class="fs-5 fw-light" style="color: white;"> Hive</h1>
+              </button>
+            </a>
+            <a style="text-decoration: none;" href="./wings.html">
+              <button onclick="handleButtonClick9()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Wings.jpg"
+                  style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                <h1 class="fs-5 fw-light" style="color: white;"> Wings</h1>
+              </button>
+            </a>
+            <a style="text-decoration: none;" href="./index.html">
+              <button onclick="handleButtonClick()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/vosoft_l.png"
+                  style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                <h1 class="fs-5 fw-light" style="color: white;"> Home</h1>
+              </button>
+            </a>
+            <a style="text-decoration: none;" href="./arya.html">
+              <button onclick="handleButtonClick1()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Arya 3.jpg"
+                  style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                <h1 class="fs-5 fw-light" style="color: white;"> Arya</h1>
+              </button>
+            </a>
+            <a style="text-decoration: none;" href="./roots.html">
+              <button onclick="handleButtonClick2()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Roots 1.jpg"
+                  style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                <h1 class="fs-5 fw-light" style="color: white;"> Roots</h1>
+              </button>
+            </a>
+            <a style="text-decoration: none;" href="./vantage.html">
+              <button onclick="handleButtonClick3()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Vantage 1.jpg"
+                  style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                <h1 class="fs-5 fw-light" style="color: white;"> Vantage</h1>
+              </button>
+            </a>
+            <a style="text-decoration: none;" href="./bolt.html">
+              <button onclick="handleButtonClick4()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Bolt 2.jpg"
+                  style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                <h1 class="fs-5 fw-light" style="color: white;"> Bolt</h1>
+              </button>
+            </a>
+            <a style="text-decoration: none;" href="./nest.html">
+              <button onclick="handleButtonClick5()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Nest 2.jpg"
+                  style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                <h1 class="fs-5 fw-light" style="color: white;"> Nest</h1>
+              </button>
+            </a>
+            <a style="text-decoration: none;" href="./waves.html">
+              <button onclick="handleButtonClick6()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/waves 7.jpg"
+                  style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                <h1 class="fs-5 fw-light" style="color: white;"> Waves</h1>
+              </button>
+            </a>
+            <a style="text-decoration: none;" href="./watch.html">
+              <button onclick="handleButtonClick7()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Watch 2.jpg"
+                  style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                <h1 class="fs-5 fw-light" style="color: white;"> Watch</h1>
+              </button>
+            </a>
+            <a style="text-decoration: none;" href="./hive.html">
+              <button onclick="handleButtonClick8()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Hive 8.jpg"
+                  style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                <h1 class="fs-5 fw-light" style="color: white;"> Hive</h1>
+              </button>
+            </a>
+            <a style="text-decoration: none;" href="./wings.html">
+              <button onclick="handleButtonClick9()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Wings.jpg"
+                  style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                <h1 class="fs-5 fw-light" style="color: white;"> Wings</h1>
+              </button>
+            </a>
+            <a style="text-decoration: none;" href="./index.html">
+              <button onclick="handleButtonClick()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/vosoft_l.png"
+                  style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                <h1 class="fs-5 fw-light" style="color: white;"> Home</h1>
+              </button>
+            </a>
+            <a style="text-decoration: none;" href="./arya.html">
+              <button onclick="handleButtonClick1()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Arya 3.jpg"
+                  style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                <h1 class="fs-5 fw-light" style="color: white;"> Arya</h1>
+              </button>
+            </a>
+            <a style="text-decoration: none;" href="./roots.html">
+              <button onclick="handleButtonClick2()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Roots 1.jpg"
+                  style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                <h1 class="fs-5 fw-light" style="color: white;"> Roots</h1>
+              </button>
+            </a>
+            <a style="text-decoration: none;" href="./vantage.html">
+              <button onclick="handleButtonClick3()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Vantage 1.jpg"
+                  style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                <h1 class="fs-5 fw-light" style="color: white;"> Vantage</h1>
+              </button>
+            </a>
+            <a style="text-decoration: none;" href="./bolt.html">
+              <button onclick="handleButtonClick4()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Bolt 2.jpg"
+                  style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                <h1 class="fs-5 fw-light" style="color: white;"> Bolt</h1>
+              </button>
+            </a>
+            <a style="text-decoration: none;" href="./nest.html">
+              <button onclick="handleButtonClick5()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Nest 2.jpg"
+                  style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                <h1 class="fs-5 fw-light" style="color: white;"> Nest</h1>
+              </button>
+            </a>
+            <a style="text-decoration: none;" href="./waves.html">
+              <button onclick="handleButtonClick6()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/waves 7.jpg"
+                  style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                <h1 class="fs-5 fw-light" style="color: white;"> Waves</h1>
+              </button>
+            </a>
+            <a style="text-decoration: none;" href="./watch.html">
+              <button onclick="handleButtonClick7()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Watch 2.jpg"
+                  style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                <h1 class="fs-5 fw-light" style="color: white;"> Watch</h1>
+              </button>
+            </a>
+            <a style="text-decoration: none;" href="./hive.html">
+              <button onclick="handleButtonClick8()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Hive 8.jpg"
+                  style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                <h1 class="fs-5 fw-light" style="color: white;"> Hive</h1>
+              </button>
+            </a>
+            <a style="text-decoration: none;" href="./wings.html">
+              <button onclick="handleButtonClick9()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Wings.jpg"
+                  style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                <h1 class="fs-5 fw-light" style="color: white;"> Wings</h1>
+              </button>
+            </a>
+          </div>
+        </div>
+    </div>
+  </section>
+    <section class="Details pt-3 pb-3" id="Details" style="background-color: #d9ddec;">
+        <div class="container">
+            <div class="row">
+                <h2 class="display-4  text-center mt-3" style="color: #001e85;">Next-generation core banking solution </h2>
+                <div class="col-lg-6 col-12 p-4">
+                    <p style="text-align: justify;">Wings offers a comprehensive Core Banking Solution adaptable for all banks. Integrates seamlessly with existing systems, simplifies KYC with cKYC Registry access. Offers Vayu Agency Banking, Bolt Financial Switch for extended services. Features Data Vault for security, real-time inventory tracking for efficiency.</p>
+                </div>
+                <div class="col-lg-6 col-12 p-4 ">
+                    <p style="text-align: justify;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque
+                        velit quidem
+                        exercitationem provident hic aperiam, ipsam ad. Quam, itaque asperiores hic impedit architecto
+                        numquam beatae deleniti
+                        tempora, unde mollitia nobis?
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe laudantium dolores dolorem iusto
+                        quam? Consequuntur labore suscipit reiciendis qui exercitationem dicta alias quibusdam facilis
+                        vitae, ipsa modi enim expedita explicabo.</p>
+                </div>
+            </div>
+            <!-- <h2 class="mb-3 display-6 text-center">Key Features: </h2> -->
+
+            <section class="pt-2 pb-3">
+                <div class="container">
+                    <div class="row justify-content-center d-flex flex-row" style="position: relative;">
+                        <div class="col-6 d-flex d-lg-none d-block">
+                        </div>
+                        <div class="col-6 text-right d-flex justify-content-end d-lg-none d-block">
+                            <a class="btn btn-primary mb-3 me-1"
+                                style="background-color: transparent; border: 0; font-size: 20px; color: gray;"
+                                href="#carouselExample" role="button" data-slide="prev">
+                                <i class="fas fa-angle-left"></i>
+                            </a>
+                            <a class="btn btn-primary mb-3"
+                                style="background-color: transparent; border: 0; font-size: 20px; color: gray;"
+                                href="#carouselExample" role="button" data-slide="next">
+                                <i class="fas fa-angle-right"></i>
+                            </a>
+                        </div>
+                        <div class="col-1 d-lg-flex d-none justify-content-center align-items-center">
+                            <a class="btn btn-primary mb-3 me-1"
+                                style="background-color: transparent; border: 0; font-size: 40px; color: gray;"
+                                href="#carouselExample" role="button" data-slide="prev">
+                                <i class="fas fa-angle-left"></i>
+                            </a>
+                        </div>
+                        <div class="col-lg-10 col-12">
+                            <div id="carouselExample" class="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <h2 class="mb-3 display-6 text-center" style="color: antiquewhite;">.</h2>
+                                        <div class="row d-flex justify-content-center m-0">
+                                            <div class="col-lg-5 m-4 card p-0"
+                                                style="border-radius: 15px; border-top: 6px solid #001e85; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
+                                                <div class="mt-3 text-center">
+                                                    <img src="./assets/Images/wlogo1.png" class="img-fluid"
+                                                        style="width: 100px;" alt="">
+                                                </div>
+                                                <div class="card-body p-4" style="height: 390px;">
+                                                    <h4 class="card-title display-6 fs-3" style="color: #001e85;">
+                                                        Wings: revolutionizing core banking</h4>
+                                                        <p class="card-text" style="text-align: justify;">Wings is a comprehensive core banking solution that enables banks to
+                                                            manage their operations seamlessly. With its robust features, advanced technology, and user-friendly interface,
+                                                            Wings empowers banks to stay competitive, enhance efficiency, and deliver superior services to their customers.
+
+
+                                                    </p>
+                                                </div>
+
+                                            </div>
+                                            <div class="col-lg-5 m-4 card p-0"
+                                                style="border-radius: 15px; border-top: 6px solid #001e85; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
+                                                <div class="mt-3 text-center">
+                                                    <img src="./assets/Images/wlogo2.png" class="img-fluid"
+                                                        style="width: 100px;" alt="">
+                                                </div>
+                                                <div class="card-body p-4" style="height: 390px;">
+                                                    <h4 class="card-title display-6 fs-3" style="color: #001e85;">
+                                                        Integrated banking operations </h4>
+                                                        <p class="card-text" style="text-align: justify;">Wings brings together all critical banking functions, including
+                                                            account management, transaction processing, loan management, treasury operations, and more, in a unified platform.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <h2 class="mb-3 display-6 text-center">Key features and benefits</h2>
+                                        <div class="row d-flex justify-content-center m-0">
+
+                                            <div class="col-lg-5 m-4 card p-0"
+                                                style="border-radius: 15px; border-top: 6px solid #001e85; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
+                                                <div class="mt-3 text-center">
+                                                    <img src="./assets/Images/wlogo3.png" class="img-fluid"
+                                                        style="width: 100px;" alt="">
+                                                </div>
+                                                <div class="card-body p-4">
+                                                    <h4 class="card-title display-6 fs-3" style="color: #001e85;">
+                                                        Customer-Centric approach </h4>
+                                                        <p class="card-text" style="text-align: justify;">Wings prioritizes customer satisfaction by providing a 360-degree view
+                                                            of customer, enabling personalized services, and empowering banks to build lasting relationships.
+
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-5 m-4 card p-0"
+                                                style="border-radius: 15px; border-top: 6px solid #001e85; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
+                                                <div class="mt-3 text-center">
+                                                    <img src="./assets/Images/wlogo4.png" class="img-fluid"
+                                                        style="width: 100px;" alt="">
+                                                </div>
+                                                <div class="card-body p-4" style="height: 390px;">
+                                                    <h4 class="card-title display-6 fs-3" style="color: #001e85;">
+                                                        Multi-Channel support </h4>
+                                                        <p class="card-text" style="text-align: justify;">Wings supports a wide range of channels, including mobile banking,
+                                                            internet banking, branch operations, and self-service kiosks, ensuring seamless access and consistent experiences
+                                                            across all touchpoints.
+
+
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <h2 class="mb-3 display-6 text-center">Key features and benefits</h2>
+                                        <div class="row d-flex justify-content-center m-0">
+                                
+                                            <div class="col-lg-5 m-4 card p-0"
+                                                style="border-radius: 15px; border-top: 6px solid #001e85; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
+                                                <div class="mt-3 text-center">
+                                                    <img src="./assets/Images/wlogo5.png" class="img-fluid"
+                                                        style="width: 100px;" alt="">
+                                                </div>
+                                                <div class="card-body p-4">
+                                                    <h4 class="card-title display-6 fs-3" style="color: #001e85;">
+                                                        Real-Time processing </h4>
+                                                        <p class="card-text" style="text-align: justify;">Wings enables real-time transaction processing, ensuring prompt and
+                                                            accurate updates to customer accounts, balances, and financial data, enhancing operational efficiency.
+
+
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-5 m-4 card p-0"
+                                                style="border-radius: 15px; border-top: 6px solid #001e85; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
+                                                <div class="mt-3 text-center">
+                                                    <img src="./assets/Images/wlogo6.png" class="img-fluid"
+                                                        style="width: 100px;" alt="">
+                                                </div>
+                                                <div class="card-body p-4" style="height: 390px;">
+                                                    <h4 class="card-title display-6 fs-3" style="color: #001e85;">
+                                                        Robust security and compliance</h4>
+                                                        <p class="card-text" style="text-align: justify;">Wings incorporates advanced security measures and complies with
+                                                            industry regulations, safeguarding customer data, and ensuring a secure banking environment.
+
+
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <h2 class="mb-3 display-6 text-center">Key features and benefits </h2>
+                                        <div class="row d-flex justify-content-center m-0">
+                                      
+                                            <div class="col-lg-5 m-4 card p-0"
+                                                style="border-radius: 15px; border-top: 6px solid #001e85; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
+                                                <div class="mt-3 text-center">
+                                                    <img src="./assets/Images/wlogo7.png" class="img-fluid"
+                                                        style="width: 100px;" alt="">
+                                                </div>
+                                                <div class="card-body p-4" style="height: 390px;">
+                                                    <h4 class="card-title display-6 fs-3" style="color: #001e85;">
+                                                        Scalable and flexible</h4>
+                                                        <p class="card-text" style="text-align: justify;">Wings is designed to adapt to the evolving needs of banks, whether
+                                                            they are small or mid-scale operations or large banking enterprises. The solution grows with your business.
+
+                                                    </p>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <h2 class="mb-3 display-6 text-center">Wings modules</h2>
+                                        <div class="row d-flex justify-content-center m-0">
+                                            <div class="col-lg-5 m-4 card p-0"
+                                                style="border-radius: 15px; border-top: 6px solid #001e85; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
+                                                <div class="mt-3 text-center">
+                                                    <img src="./assets/Images/wlogo8.png" class="img-fluid"
+                                                        style="width: 100px;" alt="">
+                                                </div>
+                                                <div class="card-body p-4" style="height: 390px;">
+                                                    <h4 class="card-title display-6 fs-3" style="color: #001e85;">Account management</h4>
+                                                    <p class="card-text" style="text-align: justify;">Effortlessly manage customer accounts, track balances, transactions, and account activities, ensuring accurate and up-to-date financial information.
+
+
+
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-5 m-4 card p-0"
+                                                style="border-radius: 15px; border-top: 6px solid #001e85; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
+                                                <div class="mt-3 text-center">
+                                                    <img src="./assets/Images/wlogo9.png" class="img-fluid"
+                                                        style="width: 100px;" alt="">
+                                                </div>
+                                                <div class="card-body p-4">
+                                                    <h4 class="card-title display-6 fs-3" style="color: #001e85;">Transaction processing </h4>
+                                                    <p class="card-text" style="text-align: justify;">Enable a wide range of transactions, covering all types of deposits, withdrawals, fund transfers, bill payments, and more, with seamless integration into other banking systems.
+
+
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <h2 class="mb-3 display-6 text-center">Wings modules</h2>
+                                        <div class="row d-flex justify-content-center m-0">
+                                            <div class="col-lg-5 m-4 card p-0"
+                                                style="border-radius: 15px; border-top: 6px solid #001e85; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
+                                                <div class="mt-3 text-center">
+                                                    <img src="./assets/Images/wlogo10.png" class="img-fluid"
+                                                        style="width: 100px;" alt="">
+                                                </div>
+                                                <div class="card-body p-4" style="height: 390px;">
+                                                    <h4 class="card-title display-6 fs-3" style="color: #001e85;">
+                                                        Loan origination system </h4>
+                                                    <p class="card-text" style="text-align: justify;">the LOS is a robust and scalable solution that consists of configurable workflow and rules engine, application processing and management, decision-making based on predefined criteria and advanced credit scoring models, Document Management and Collateral Management. By leveraging advanced technology, intelligent workflows, and data analytics, our system enhances efficiency, reduces processing time, and minimizes risk.
+
+
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-5 m-4 card p-0"
+                                                style="border-radius: 15px; border-top: 6px solid #001e85; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
+                                                <div class="mt-3 text-center">
+                                                    <img src="./assets/Images/wlogo11.png" class="img-fluid"
+                                                        style="width: 100px;" alt="">
+                                                </div>
+                                                <div class="card-body p-4">
+                                                    <h4 class="card-title display-6 fs-3" style="color: #001e85;">Loan management </h4>
+                                                    <p class="card-text" style="text-align: justify;">Streamline the loan lifecycle, from application and approval to disbursement, servicing, and collections. Automate loan processes, manage collateral, and mitigate risk effectively.
+
+
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <h2 class="mb-3 display-6 text-center">Wings modules</h2>
+                                        <div class="row d-flex justify-content-center m-0">
+                                            <div class="col-lg-5 m-4 card p-0"
+                                                style="border-radius: 15px; border-top: 6px solid #001e85; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
+                                                <div class="mt-3 text-center">
+                                                    <img src="./assets/Images/wlogo12.png" class="img-fluid"
+                                                        style="width: 100px;" alt="">
+                                                </div>
+                                                <div class="card-body p-4" style="height: 390px;">
+                                                    <h4 class="card-title display-6 fs-3" style="color: #001e85;">
+                                                        Treasury operations </h4>
+                                                    <p class="card-text" style="text-align: justify;">Empower banks to manage treasury operations, including trading, investments, risk management, and liquidity management, optimizing returns while  ensuring  compliance.
+
+
+
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-5 m-4 card p-0"
+                                                style="border-radius: 15px; border-top: 6px solid #001e85; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
+                                                <div class="mt-3 text-center">
+                                                    <img src="./assets/Images/wlogo13.png" class="img-fluid"
+                                                        style="width: 100px;" alt="">
+                                                </div>
+                                                <div class="card-body p-4" style="height: 390px;">
+                                                    <h4 class="card-title display-6 fs-3" style="color: #001e85;">
+                                                        Data vault </h4>
+                                                    <p class="card-text" style="text-align: justify;">Data Vault is a cutting-edge hardware security encryption solution that ensures the utmost protection for your critical data. By combining advanced encryption algorithms, tamper-resistant hardware, and robust key management, Data Vault delivers data security to safeguard against unauthorized access and breaches
+
+
+
+
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-1 d-lg-flex d-none justify-content-center align-items-center">
+                            <a class="btn btn-primary mb-3"
+                                style="background-color: transparent; border: 0; font-size: 40px; color: gray;"
+                                href="#carouselExample" role="button" data-slide="next">
+                                <i class="fas fa-angle-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <h2 class="display-4 text-center mt-3" style="color: #001e85;">Experience the power of Wings
+                        </h2>
+                        <div class="col-lg-12 col-12 p-4">
+                            <p style="text-align: justify;">Join leading banks across the industry in embracing Wings and unlocking the full
+                                potential of your banking operations. Elevate customer experiences, enhance efficiency, and achieve operational
+                                excellence. Contact us today to learn more about Wings and how it can transform your bank.
+
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+    </section>
+    <!-- Include jQuery from a CDN -->
+    <script src="./assets/js/script2.js"></script>
+    <script src="./assets/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

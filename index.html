@@ -1,0 +1,779 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>vsoft</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+      #scrollSection {
+        position: absolute;
+        z-index: 10;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.75);
+        overflow-x: hidden;
+        width: 100vw;
+        /* Ensures the section takes up the full viewport width */
+      }
+    
+      .scroller {
+        overflow: hidden;
+        /* Hides any content that overflows the container */
+      }
+    
+      .scroller__inner {
+        display: flex;
+        /* Ensures all buttons stay in a single line */
+      }
+      .custom-carousel {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+  }
+  
+  .carousel-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .carousel-slide {
+    flex: 0 0 100%;
+  }
+  
+  .custom-carousel-indicators {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+  }
+  
+  .custom-carousel-indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #999;
+    margin: 0 5px;
+  }
+  
+  .custom-carousel-indicator.active {
+    background-color: #333;
+  }
+    </style>
+  </head>
+  <body style="overflow-x: hidden">
+    <nav class="navbar navbar-expand-lg d-flex justify-content-center pt-1 pb-1"
+      style="background-color: #042f63; position: fixed; z-index: 99; width: 100%;">
+      <div class="container m-0">
+        <a href="./index.html"><img src="./assets/Images/Logo Proper White.png" style="width: 120px;" alt=""></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse d-lg-flex justify-content-lg-end" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active ms-2 me-2" aria-current="page" href="#" style="color: white;">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link ms-2 me-2" href="#about" style="color: white;">About VSoft</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link ms-2 me-2" href="#managed" style="color: white;">Managed Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link ms-2 me-2" href="#data" style="color: white;">Data Center</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link ms-2 me-2" href="#data_sec" style="color: white;">Data Security</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link ms-2 me-2" href="#car" style="color: white;">Careers</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link ms-2 me-2" href="#contact" style="color: white;">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+    <div class="custom-carousel">
+      <div class="carousel-container">
+        <div class="carousel-slide" style="position: relative;">
+          <img src="./assets/Images/2517-01.jpg" class="d-block w-100" style="height: 100vh; object-fit: cover;" alt="...">
+          <div class="container"
+            style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100%;">
+            <div class="row d-flex justify-content-center">
+              <div class="col-lg-8 col-12 text-center">
+                <img src="./assets/Images/Logo Proper.png" class="img-fluid mb-2" style="width: 500px;" alt="">
+                <h1 class="display-5 pt-1">Mission</h1>
+                <p class="ps-1 pe-1" style="text-align: justify;">Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been
+                  the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of
+                  type and scrambled it to make a type specimen book. It has survived not only five centuries, but also
+                  the leap into electronic typesetting, remaining essentially unchanged.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+        <div class="carousel-slide" style="position: relative;">
+          <img src="./assets/Images/Arya 3.jpg" class="d-block w-100" style="height: 100vh; object-fit: cover;" alt="...">
+          <div class="overlay_text">
+            <div class="row d-flex justify-content-center">
+              <div class="col-8 text-center">
+                <a style="cursor: pointer;" href="./arya.html">
+                  <img src="./assets/Images/Arya more red.png" class="img-fluid res_image" style="width: 500px;" alt=""></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-slide" style="position: relative;">
+          <video controls loop autoplay muted class="d-block w-100" style="height: 100vh; object-fit: cover;">
+            <source src="./assets/Images/Roots 1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <div class="overlay_text">
+            <div class="row d-flex justify-content-center">
+              <div class="col-8 text-center">
+                <a href="./roots.html">
+                  <img src="./assets/Images/Roots-06.png" class="img-fluid res_image" style="width: 500px;" alt="">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-slide" style="position: relative;">
+          <img src="./assets/Images/Vantage_banner.jpg" class="d-block w-100" style="height: 100vh; object-fit: cover;"
+            alt="...">
+          <div class="overlay_text">
+            <div class="row d-flex justify-content-center">
+              <div class="col-8 text-center">
+                <a href="./vantage.html">
+                  <img src="./assets/Images/vantage.png" class="img-fluid res_image" style="width: 600px;" alt="">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-slide" style="position: relative;">
+          <img src="./assets/Images/Bolt 2.jpg" class="d-block w-100" style="height: 100vh; object-fit: cover;" alt="...">
+          <div class="overlay_text">
+            <div class="row d-flex justify-content-center">
+              <div class="col-8 text-center">
+                <a href="./bolt.html">
+                  <img src="./assets/Images/bolt.png" class="img-fluid res_image" style="width: 500px;" alt="">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-slide" style="position: relative;">
+          <img src="./assets/Images/Nest 2.jpg" class="d-block w-100" style="height: 100vh; object-fit: cover;" alt="...">
+          <div class="overlay_text">
+            <div class="row d-flex justify-content-center">
+              <div class="col-8 text-center">
+                <a href="./nest.html"><img src="./assets/Images/nest final.png" class="img-fluid res_image"
+                    style="width: 500px;" alt=""></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-slide" style="position: relative;">
+          <img src="./assets/Images/waves 7.jpg" class="d-block w-100" style="height: 100vh; object-fit: cover;" alt="...">
+          <div class="overlay_text">
+            <div class="row d-flex justify-content-center">
+              <div class="col-8 text-center">
+                <a href="./waves.html"><img src="./assets/Images/Waves Final Feb 3.png" class="img-fluid res_image"
+                    style="width: 500px;" alt=""></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-slide" style="position: relative;">
+          <img src="./assets/Images/watch 4.jpg" class="d-block w-100" style="height: 100vh; object-fit: cover;" alt="...">
+          <div class="overlay_text">
+            <div class="row d-flex justify-content-center">
+              <div class="col-8 text-center">
+                <a href="./watch.html">
+                  <img src="./assets/Images/watch dark.png" class="img-fluid res_image" style="width: 500px;" alt="">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-slide" style="position: relative;">
+          <img src="./assets/Images/Hive 8.jpg" class="d-block w-100" style="height: 100vh; object-fit: cover;" alt="...">
+          <div class="overlay_text">
+            <div class="row d-flex justify-content-center">
+              <div class="col-8 text-center">
+                <a href="./hive.html">
+                  <img src="./assets/Images/hive_logo.png" class="img-fluid res_image" style="width: 500px;" alt="">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-slide" style="position: relative;">
+          <img src="./assets/Images/Wings.jpg" class="d-block w-100" style="height: 100vh; object-fit: cover;" alt="...">
+          <div class="overlay_text">
+            <div class="row d-flex justify-content-center">
+              <div class="col-8 text-center">
+                <a href="./wings.html">
+                  <img src="./assets/Images/wings dark logo.png" class="img-fluid res_image" style="width: 700px;" alt="">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="custom-carousel-indicators"></div>
+    </div>
+
+
+
+
+
+<!-- <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+      
+      <div class="carousel-indicators p-1 m-0 ms-0 w-100" style="background: transparent;">
+        <button type="button" data-bs-target="#carouselExampleCaptions" id="button1" data-bs-slide-to="0" aria-current="true"
+          aria-label="Slide 1" style="color: black;"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" id="button2" data-bs-slide-to="1" aria-label="Slide 2"
+          style="color: black;"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" id="button3" data-bs-slide-to="2" aria-label="Slide 3"
+          style="color: black;"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" id="button4" data-bs-slide-to="3" aria-label="Slide 4"
+          style="color: black;"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" id="button5" data-bs-slide-to="4" aria-label="Slide 5"
+          style="color: black;"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" id="button6" data-bs-slide-to="5" aria-label="Slide 6"
+          style="color: black;"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" id="button7" data-bs-slide-to="6" aria-label="Slide 7"
+          style="color: black;"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" id="button8" data-bs-slide-to="7" aria-label="Slide 8"
+          style="color: black;"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" id="button9" data-bs-slide-to="8" aria-label="Slide 9"
+          style="color: black;"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" id="button10" data-bs-slide-to="9"
+          aria-label="Slide 10" style="color: black;"></button>
+      </div>
+    
+      <div class="carousel-inner">
+        <div class="carousel-item active" style="position: relative;">
+          <img src="./assets/Images/2517-01.jpg" class="d-block w-100" style="height: 100vh; object-fit: cover;" alt="...">
+          <div class="container"
+            style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100%;">
+            <div class="row d-flex justify-content-center">
+                <div class="col-lg-8 col-12 text-center">
+                  <img src="./assets/Images/Logo Proper.png" class="img-fluid mb-2" style="width: 500px;" alt="">
+                  <h1 class="display-5 pt-1">Mission</h1>
+                  <p class="ps-1 pe-1" style="text-align: justify;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                    the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of
+                    type and scrambled it to make a type specimen book. It has survived not only five centuries, but also
+                    the leap into electronic typesetting, remaining essentially unchanged.</p>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item" style="position: relative;">
+          <img src="./assets/Images/Arya 3.jpg" class="d-block w-100" style="height: 100vh; object-fit: cover;" alt="...">
+          <div class="overlay_text">
+            <div class="row d-flex justify-content-center">
+                <div class="col-8 text-center">
+                    <a style="cursor: pointer;" href="./arya.html">
+                      <img src="./assets/Images/Arya more red.png" class="img-fluid res_image" style="width: 500px;" alt=""></a>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item" style="position: relative;">
+          <img src="./assets/Images/Roots 1.jpg" class="d-block w-100" style="height: 100vh; object-fit: cover;" alt="...">
+          <div class="overlay_text">
+            <div class="row d-flex justify-content-center">
+                <div class="col-8 text-center">
+                    <a href="./roots.html"><img src="./assets/Images/Roots-06.png" class="img-fluid res_image" style="width: 500px;" alt=""></a>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item" style="position: relative;">
+          <img src="./assets/Images/Vantage_banner.jpg" class="d-block w-100" style="height: 100vh; object-fit: cover;" alt="...">
+          <div class="overlay_text">
+            <div class="row d-flex justify-content-center">
+                <div class="col-8 text-center">
+                    <a href="./vantage.html">
+                      <img src="./assets/Images/vantage.png" class="img-fluid res_image" style="width: 600px;" alt="">
+                    </a>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item" style="position: relative;">
+          <img src="./assets/Images/Bolt 2.jpg" class="d-block w-100" style="height: 100vh; object-fit: cover;" alt="...">
+          <div class="overlay_text">
+            <div class="row d-flex justify-content-center">
+                <div class="col-8 text-center">
+                    <a href="./bolt.html">
+                      <img src="./assets/Images/bolt.png" class="img-fluid res_image" style="width: 500px;" alt="">
+                    </a>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item" style="position: relative;">
+          <img src="./assets/Images/Nest 2.jpg" class="d-block w-100" style="height: 100vh; object-fit: cover;" alt="...">
+          <div class="overlay_text">
+            <div class="row d-flex justify-content-center">
+                <div class="col-8 text-center">
+                    <a href="./nest.html"><img src="./assets/Images/nest final.png" class="img-fluid res_image" style="width: 500px;" alt=""></a>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item" style="position: relative;">
+          <img src="./assets/Images/waves 7.jpg" class="d-block w-100" style="height: 100vh; object-fit: cover;" alt="...">
+          <div class="overlay_text">
+            <div class="row d-flex justify-content-center">
+                <div class="col-8 text-center">
+                    <a href="./waves.html"><img src="./assets/Images/Waves Final Feb 3.png" class="img-fluid res_image" style="width: 500px;" alt=""></a>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item" style="position: relative;">
+          <img src="./assets/Images/watch 4.jpg" class="d-block w-100" style="height: 100vh; object-fit: cover;" alt="...">
+          <div class="overlay_text">
+            <div class="row d-flex justify-content-center">
+                <div class="col-8 text-center">
+                    <a href="./watch.html">
+                      <img src="./assets/Images/watch dark.png" class="img-fluid res_image" style="width: 500px;" alt="">
+                    </a>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item" style="position: relative;">
+          <img src="./assets/Images/Hive 8.jpg" class="d-block w-100" style="height: 100vh; object-fit: cover;" alt="...">
+          <div class="overlay_text">
+            <div class="row d-flex justify-content-center">
+                <div class="col-8 text-center">
+                    <a href="./hive.html">
+                      <img src="./assets/Images/hive_logo.png" class="img-fluid res_image" style="width: 500px;" alt="">
+                    </a>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item" style="position: relative;">
+          <img src="./assets/Images/Wings.jpg" class="d-block w-100" style="height: 100vh; object-fit: cover;" alt="...">
+          <div class="overlay_text">
+            <div class="row d-flex justify-content-center">
+                <div class="col-8 text-center">
+                    <a href="./wings.html">
+                      <img src="./assets/Images/wings dark logo.png" class="img-fluid res_image" style="width: 700px;" alt="">
+                    </a>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+    </div> -->
+
+
+
+
+    <section class="mb-lg-4 mb-2" id="scrollSection">
+      <div class="scroller" data-direction="left" data-speed="slow">
+        <div class="scroller__inner pt-1 pb-1">
+          <div class="img-indi d-flex">
+            <a  style="text-decoration: none;" href="./index.html">
+              <button onclick="handleButtonClick()" class="d-flex align-items-center ms-1 me-lg-5 pe-2"
+              style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/vosoft_l.png" style="width: 120px; height: 70px; border-radius: 5px;" class="me-2"
+                alt="">
+              <h1 class="fs-5 fw-light" style="color: white;"> Home</h1>
+            </button>
+            </a>
+            <a  style="text-decoration: none;" href="./arya.html">
+              <button onclick="handleButtonClick1()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+              style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Arya 3.jpg" style="width: 120px; height: 70px; border-radius: 5px;" class="me-2"
+                alt="">
+              <h1 class="fs-5 fw-light" style="color: white;"> Arya</h1>
+            </button>
+            </a>
+            <a  style="text-decoration: none;" href="./roots.html">
+              <button onclick="handleButtonClick2()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+              style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Roots 1.jpg" style="width: 120px; height: 70px; border-radius: 5px;" class="me-2"
+                alt="">
+              <h1 class="fs-5 fw-light" style="color: white;"> Roots</h1>
+            </button>
+            </a>
+            <a  style="text-decoration: none;" href="./vantage.html">
+              <button onclick="handleButtonClick3()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+              style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Vantage 1.jpg" style="width: 120px; height: 70px; border-radius: 5px;"
+                class="me-2" alt="">
+              <h1 class="fs-5 fw-light" style="color: white;"> Vantage</h1>
+            </button>
+            </a>
+            <a  style="text-decoration: none;" href="./bolt.html">
+              <button onclick="handleButtonClick4()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+              style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Bolt 2.jpg" style="width: 120px; height: 70px; border-radius: 5px;" class="me-2"
+                alt="">
+              <h1 class="fs-5 fw-light" style="color: white;"> Bolt</h1>
+            </button>
+            </a>
+            <a  style="text-decoration: none;" href="./nest.html">
+              <button onclick="handleButtonClick5()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+              style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Nest 2.jpg" style="width: 120px; height: 70px; border-radius: 5px;" class="me-2"
+                alt="">
+              <h1 class="fs-5 fw-light" style="color: white;"> Nest</h1>
+            </button>
+            </a>
+            <a  style="text-decoration: none;" href="./waves.html">
+              <button onclick="handleButtonClick6()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+              style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/waves 7.jpg" style="width: 120px; height: 70px; border-radius: 5px;" class="me-2"
+                alt="">
+              <h1 class="fs-5 fw-light" style="color: white;"> Waves</h1>
+            </button>
+            </a>
+            <a  style="text-decoration: none;" href="./watch.html">
+              <button onclick="handleButtonClick7()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+              style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Watch 2.jpg" style="width: 120px; height: 70px; border-radius: 5px;" class="me-2"
+                alt="">
+              <h1 class="fs-5 fw-light" style="color: white;"> Watch</h1>
+            </button>
+            </a>
+            <a  style="text-decoration: none;" href="./hive.html">
+              <button onclick="handleButtonClick8()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+              style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Hive 8.jpg" style="width: 120px; height: 70px; border-radius: 5px;" class="me-2"
+                alt="">
+              <h1 class="fs-5 fw-light" style="color: white;"> Hive</h1>
+            </button>
+            </a>
+            <a  style="text-decoration: none;" href="./wings.html">
+              <button onclick="handleButtonClick9()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+              style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Wings.jpg" style="width: 120px; height: 70px; border-radius: 5px;" class="me-2"
+                alt="">
+              <h1 class="fs-5 fw-light" style="color: white;"> Wings</h1>
+            </button>
+            </a>
+            <a  style="text-decoration: none;" href="./index.html">
+              <button onclick="handleButtonClick()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+              style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/vosoft_l.png" style="width: 120px; height: 70px; border-radius: 5px;" class="me-2"
+                alt="">
+              <h1 class="fs-5 fw-light" style="color: white;"> Home</h1>
+            </button>
+            </a>
+            <a  style="text-decoration: none;" href="./arya.html">
+              <button onclick="handleButtonClick1()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+              style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Arya 3.jpg" style="width: 120px; height: 70px; border-radius: 5px;" class="me-2"
+                alt="">
+              <h1 class="fs-5 fw-light" style="color: white;"> Arya</h1>
+            </button>
+            </a>
+            <a  style="text-decoration: none;" href="./roots.html">
+              <button onclick="handleButtonClick2()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+              style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Roots 1.jpg" style="width: 120px; height: 70px; border-radius: 5px;" class="me-2"
+                alt="">
+              <h1 class="fs-5 fw-light" style="color: white;"> Roots</h1>
+            </button>
+            </a>
+            <a  style="text-decoration: none;" href="./vantage.html">
+              <button onclick="handleButtonClick3()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+              style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Vantage 1.jpg" style="width: 120px; height: 70px; border-radius: 5px;"
+                class="me-2" alt="">
+              <h1 class="fs-5 fw-light" style="color: white;"> Vantage</h1>
+            </button>
+            </a>
+            <a  style="text-decoration: none;" href="./bolt.html">
+              <button onclick="handleButtonClick4()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+              style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Bolt 2.jpg" style="width: 120px; height: 70px; border-radius: 5px;" class="me-2"
+                alt="">
+              <h1 class="fs-5 fw-light" style="color: white;"> Bolt</h1>
+            </button>
+            </a>
+            <a  style="text-decoration: none;" href="./nest.html">
+              <button onclick="handleButtonClick5()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+              style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Nest 2.jpg" style="width: 120px; height: 70px; border-radius: 5px;" class="me-2"
+                alt="">
+              <h1 class="fs-5 fw-light" style="color: white;"> Nest</h1>
+            </button>
+            </a>
+            <a  style="text-decoration: none;" href="./waves.html">
+              <button onclick="handleButtonClick6()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+              style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/waves 7.jpg" style="width: 120px; height: 70px; border-radius: 5px;" class="me-2"
+                alt="">
+              <h1 class="fs-5 fw-light" style="color: white;"> Waves</h1>
+            </button>
+            </a>
+            <a  style="text-decoration: none;" href="./watch.html">
+              <button onclick="handleButtonClick7()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+              style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Watch 2.jpg" style="width: 120px; height: 70px; border-radius: 5px;" class="me-2"
+                alt="">
+              <h1 class="fs-5 fw-light" style="color: white;"> Watch</h1>
+            </button>
+            </a>
+            <a  style="text-decoration: none;" href="./hive.html">
+              <button onclick="handleButtonClick8()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+              style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Hive 8.jpg" style="width: 120px; height: 70px; border-radius: 5px;" class="me-2"
+                alt="">
+              <h1 class="fs-5 fw-light" style="color: white;"> Hive</h1>
+            </button>
+            </a>
+            <a  style="text-decoration: none;" href="./wings.html">
+              <button onclick="handleButtonClick9()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+              style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Wings.jpg" style="width: 120px; height: 70px; border-radius: 5px;" class="me-2"
+                alt="">
+              <h1 class="fs-5 fw-light" style="color: white;"> Wings</h1>
+            </button>
+            </a>
+            <a  style="text-decoration: none;" href="./index.html">
+              <button onclick="handleButtonClick()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+              style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/vosoft_l.png" style="width: 120px; height: 70px; border-radius: 5px;" class="me-2"
+                alt="">
+              <h1 class="fs-5 fw-light" style="color: white;"> Home</h1>
+            </button>
+            </a>
+            <a  style="text-decoration: none;" href="./arya.html">
+              <button onclick="handleButtonClick1()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+              style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Arya 3.jpg" style="width: 120px; height: 70px; border-radius: 5px;" class="me-2"
+                alt="">
+              <h1 class="fs-5 fw-light" style="color: white;"> Arya</h1>
+            </button>
+            </a>
+            <a  style="text-decoration: none;" href="./roots.html">
+              <button onclick="handleButtonClick2()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+              style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Roots 1.jpg" style="width: 120px; height: 70px; border-radius: 5px;" class="me-2"
+                alt="">
+              <h1 class="fs-5 fw-light" style="color: white;"> Roots</h1>
+            </button>
+            </a>
+            <a  style="text-decoration: none;" href="./vantage.html">
+              <button onclick="handleButtonClick3()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+              style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Vantage 1.jpg" style="width: 120px; height: 70px; border-radius: 5px;"
+                class="me-2" alt="">
+              <h1 class="fs-5 fw-light" style="color: white;"> Vantage</h1>
+            </button>
+            </a>
+            <a  style="text-decoration: none;" href="./bolt.html">
+              <button onclick="handleButtonClick4()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+              style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Bolt 2.jpg" style="width: 120px; height: 70px; border-radius: 5px;" class="me-2"
+                alt="">
+              <h1 class="fs-5 fw-light" style="color: white;"> Bolt</h1>
+            </button>
+            </a>
+            <a  style="text-decoration: none;" href="./nest.html">
+              <button onclick="handleButtonClick5()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+              style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Nest 2.jpg" style="width: 120px; height: 70px; border-radius: 5px;" class="me-2"
+                alt="">
+              <h1 class="fs-5 fw-light" style="color: white;"> Nest</h1>
+            </button>
+            </a>
+            <a  style="text-decoration: none;" href="./waves.html">
+              <button onclick="handleButtonClick6()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+              style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/waves 7.jpg" style="width: 120px; height: 70px; border-radius: 5px;" class="me-2"
+                alt="">
+              <h1 class="fs-5 fw-light" style="color: white;"> Waves</h1>
+            </button>
+            </a>
+            <a  style="text-decoration: none;" href="./watch.html">
+              <button onclick="handleButtonClick7()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+              style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Watch 2.jpg" style="width: 120px; height: 70px; border-radius: 5px;" class="me-2"
+                alt="">
+              <h1 class="fs-5 fw-light" style="color: white;"> Watch</h1>
+            </button>
+            </a>
+            <a  style="text-decoration: none;" href="./hive.html">
+              <button onclick="handleButtonClick8()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+              style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Hive 8.jpg" style="width: 120px; height: 70px; border-radius: 5px;" class="me-2"
+                alt="">
+              <h1 class="fs-5 fw-light" style="color: white;"> Hive</h1>
+            </button>
+            </a>
+            <a  style="text-decoration: none;" href="./wings.html">
+              <button onclick="handleButtonClick9()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+              style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Wings.jpg" style="width: 120px; height: 70px; border-radius: 5px;" class="me-2"
+                alt="">
+              <h1 class="fs-5 fw-light" style="color: white;"> Wings</h1>
+            </button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+   
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+      <section class="about pt-5 pb-5" id="about" style="background-color: rgb(201, 230, 230);">
+        <div class="about_us container pt-5 pb-5" id="about_us">
+          <div class="row d-flex justify-content-center align-items-center">
+            <div class="col-lg-7 col-12 text-center">
+              <img src="./assets/Images/visa-application-form-smartphone.jpg" style="width: 900px;" class="img-fluid" alt="">
+            </div>
+            <div class="col-lg-3 col-12">
+              <div style="background-color: white;" class="pt-4 pb-4 ps-5 pe-5 about_card">
+                <h2 class="display-6 " style="color: #042f63;">About vsoft</h2>
+                <p style="text-align: justify;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio officiis deleniti ab, ut
+                  corporis dolores quae recusandae illum, tenetur enim veniam molestiae illo quaerat similique, repellendus modi
+                  explicabo aut. Nisi? Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita quisquam consequuntur suscipit
+                  dignissimos delectus reprehenderit nobis animi adipisci labore recusandae, ab esse.</p>
+                <div class="text-end">
+                  <a href="#">More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="con" style="background-color: rgb(201, 230, 230);">
+        <section class="managed pt-5 pb-5 mb-lg-3 mb-3" id="managed" style="background-color: #042f63;">
+          <div class="managed_services container pt-5 pb-5" id="managed_services">
+            <div class="row d-flex justify-content-center align-items-center">
+            <div class="col-lg-8 col-12">
+              <h2 class="display-6  text-center" style="color: white;">Managed Services</h2>
+              <p style="color: white; text-align: justify;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet minima
+                omnis aliquam fugit eius ratione distinctio libero qui doloribus, harum, esse quaerat architecto non, eaque explicabo
+                dolorum accusantium. Odio sit odit minus nemo tenetur vitae deleniti vel culpa ipsum dolor beatae, consectetur earum
+                obcaecati? Delectus dicta natus laudantium sunt culpa? Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Incidunt nihil voluptas cumque voluptatum iure quibusdam! Id illo ipsa placeat officiis dolorem amet, repellendus enim
+                est facilis at asperiores ratione quis!</p>
+              <div class="text-end">
+                <a href="#" style="color: white;">More</a>
+              </div>
+              </div>
+              </div>
+        </div>
+      </section>
+      <section class="data pt-5 pb-5 mb-lg-3 mb-3" id="data" style="background-color: rgb(255, 255, 255);">
+        <div class="data_center  container pt-5 pb-5" id="data_center">
+          <div class="row  d-flex justify-content-center align-items-center ">
+            <div class="col-lg-8 col-12">
+              <h2 class="display-6  text-center" style="color: #042f63;">Data Center</h2>
+              <p style="color: #042f63; text-align: justify;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet minima
+                omnis aliquam fugit eius ratione distinctio libero qui doloribus, harum, esse quaerat architecto non, eaque explicabo
+                dolorum accusantium. Odio sit odit minus nemo tenetur vitae deleniti vel culpa ipsum dolor beatae, consectetur earum
+                obcaecati? Delectus dicta natus laudantium sunt culpa? Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Incidunt nihil voluptas cumque voluptatum iure quibusdam! Id illo ipsa placeat officiis dolorem amet, repellendus enim
+                est facilis at asperiores ratione quis!</p>
+              <div class="text-end">
+                <a href="#" style="color: #042f63;">More</a>
+              </div>
+              </div>
+              </div>
+        </div>
+      </section>
+      <section class="data_sec pt-5 pb-5 mb-lg-3 mb-3" id="data_sec" style="background-color: #042f63;">
+        <div class="data_security container pt-5 pb-5" id="data_security">
+          <div class="row d-flex justify-content-center align-items-center ">
+            <div class="col-lg-8 col-12">
+              <h2 class="display-6  text-center" style="color: white;">Data Security</h2>
+              <p style="color: white; text-align: justify;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet minima
+                omnis aliquam fugit eius ratione distinctio libero qui doloribus, harum, esse quaerat architecto non, eaque explicabo
+                dolorum accusantium. Odio sit odit minus nemo tenetur vitae deleniti vel culpa ipsum dolor beatae, consectetur earum
+                obcaecati? Delectus dicta natus laudantium sunt culpa? Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Incidunt nihil voluptas cumque voluptatum iure quibusdam! Id illo ipsa placeat officiis dolorem amet, repellendus enim
+                est facilis at asperiores ratione quis!</p>
+              <div class="text-end">
+                <a href="#" style="color: white;">More</a>
+              </div>
+              </div>
+              </div>
+        </div>
+      </section>
+      <section class="car pt-5 pb-5 mb-lg-3 mb-3" id="car" style="background-color: rgb(255, 255, 255);">
+        <div class="Careers container pt-5 pb-5" id="Careers">
+          <div class="row d-flex justify-content-center align-items-center ">
+            <div class="col-lg-8 col-12">
+              <h2 class="display-6 text-center" style="color: #042f63;">Careers</h2>
+              <p style="color: #042f63; text-align: justify;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet minima
+                omnis aliquam fugit eius ratione distinctio libero qui doloribus, harum, esse quaerat architecto non, eaque explicabo
+                dolorum accusantium. Odio sit odit minus nemo tenetur vitae deleniti vel culpa ipsum dolor beatae, consectetur earum
+                obcaecati? Delectus dicta natus laudantium sunt culpa? Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Incidunt nihil voluptas cumque voluptatum iure quibusdam! Id illo ipsa placeat officiis dolorem amet, repellendus enim
+                est facilis at asperiores ratione quis!</p>
+              <div class="text-end">
+                <a href="#" style="color: #042f63;">More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="contact  pt-5" id="contact" style="background-color: #042f63;">
+        <div class="contact_us container pt-5 pb-5" id="contact_us">
+          <div class="row  pb-5 d-flex justify-content-center align-items-center">
+            <div class="col-lg-10 col-11">
+              <div class="row d-flex justify-content-center align-items-center p-lg-5 p-2" style="background-color: white;">
+                <div class="col-lg-7 col-12 text-">
+                  <div class="text-lg-start text-center">
+                    <img src="./assets/Images/contact_img.png" class="img-fluid" alt="">
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-3 col-4 me-lg-3 m-0 pt-3">
+                      <p class="fw-semibold m-0 fs-4">Sydney</p>
+                      <p class="m-0">45 Pirramma Rd,</p>
+                      <p class="m-0">Pyrnmo NSW 2022nt</p>
+                    </div>
+                    <div class="col-lg-3 col-4 me-lg-3 m-0 pt-3">
+                      <p class="fw-semibold m-0 fs-4">Melbourne</p>
+                      <p class="m-0">163 Collines St,</p>
+                      <p class="m-0">Melbourne VIC 3000</p>
+                    </div>
+                    <div class="col-lg-3 col-4 me-lg-3 m-0 pt-3">
+                      <p class="fw-semibold m-0 fs-4">Los Angels</p>
+                      <p class="m-0">340 Main st, Venice</p>
+                      <p class="m-0">CA 902291, USA</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-5 col-12 flex-column">
+                  <h2 class="display-6" style="color: #042f63;">Get in touch</h2>
+                  <p>Have an inquiry or some feedback for us? <br> Fill out the form below to contact our team.</p>
+                  <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Name</label>
+                    <input style="background-color: whitesmoke;" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter Your Name">
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                    <input style="background-color: whitesmoke;" type="email" class="form-control" id="exampleFormControlInput1" placeholder="Enter a valid Email">
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">How can we Help?</label>
+                    <textarea style="background-color: whitesmoke;" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                  </div>
+                  <!-- Added button with inline CSS -->
+                  <a href="#" class="btn"
+                    style="display: inline-block; width: 100%; padding: 10px 20px; background-color: rgb(213, 140, 5); color: white; text-decoration: none; text-align: center;">Submit</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </section>
+      </section>
+
+      <script src="./assets/js/script2.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </body>
+</html>

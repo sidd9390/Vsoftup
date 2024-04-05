@@ -1,0 +1,635 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>vsoft</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <style>
+          #scrollSection {
+            position: absolute;
+            z-index: 10;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.75);
+            overflow-x: hidden;
+            width: 100vw;
+            /* Ensures the section takes up the full viewport width */
+          }
+        
+          .scroller {
+            overflow: hidden;
+            /* Hides any content that overflows the container */
+          }
+        
+          .scroller__inner {
+            display: flex;
+            /* Ensures all buttons stay in a single line */
+          }
+        
+          .custom-carousel {
+            position: relative;
+            max-width: 100%;
+            overflow: hidden;
+          }
+        
+          .carousel-container {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+          }
+        
+          .carousel-slide {
+            flex: 0 0 100%;
+          }
+        
+          .custom-carousel-indicators {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+          }
+        
+          .custom-carousel-indicator {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #999;
+            margin: 0 5px;
+          }
+        
+          .custom-carousel-indicator.active {
+            background-color: #333;
+          }
+        </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg d-flex justify-content-center pt-1 pb-1" style="background-color: #042f63; position: fixed; z-index: 99; width: 100%;">
+        <div class="container m-0">
+            <a href="./index.html"><img src="./assets/Images/Logo Proper White.png" style="width: 120px;" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse d-lg-flex justify-content-lg-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active ms-2 me-2" aria-current="page" href="./index.html#Home"
+                            style="color: white;">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link ms-2 me-2" href="./index.html#about_us" style="color: white;">About VSoft</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link ms-2 me-2" href="./index.html#managed_services" style="color: white;">Managed
+                            Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link ms-2 me-2" href="./index.html#data_center" style="color: white;">Data
+                            Center</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link ms-2 me-2" href="./index.html#data_security" style="color: white;">Data
+                            Security</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link ms-2 me-2" href="./index.html#Careers" style="color: white;">Careers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link ms-2 me-2" href="./index.html#contact_us" style="color: white;">Contact
+                            Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="custom-carousel">
+      <div class="carousel-container">
+        
+        <div class="carousel-slide" style="position: relative;">
+          <video controls loop autoplay class="d-block w-100" style="height: 100vh; object-fit: cover;">
+            <source src="./assets/Images/Vantage Point(30sec).mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <!-- <div class="overlay_text">
+            <div class="row d-flex justify-content-center">
+              <div class="col-8 text-center">
+                <a href="./roots.html">
+                  <img src="./assets/Images/Roots-06.png" class="img-fluid res_image" style="width: 500px;" alt="">
+                </a>
+              </div>
+            </div>
+          </div> -->
+        </div>
+        
+        
+      </div>
+    </div>
+    <section class="mb-lg-2 mb-2" id="scrollSection">
+      <div class="scroller" data-direction="left" data-speed="slow">
+        <div class="scroller__inner pt-1 pb-1">
+          <div class="img-indi d-flex">
+            <a style="text-decoration: none;" href="./index.html">
+              <button onclick="handleButtonClick()" class="d-flex align-items-center ms-1 me-lg-5 pe-2"
+                style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/vosoft_l.png"
+                  style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                <h1 class="fs-5 fw-light" style="color: white;"> Home</h1>
+              </button>
+            </a>
+            <a style="text-decoration: none;" href="./arya.html">
+              <button onclick="handleButtonClick1()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Arya 3.jpg"
+                  style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                <h1 class="fs-5 fw-light" style="color: white;"> Arya</h1>
+              </button>
+            </a>
+            <a style="text-decoration: none;" href="./roots.html">
+              <button onclick="handleButtonClick2()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Roots 1.jpg"
+                  style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                <h1 class="fs-5 fw-light" style="color: white;"> Roots</h1>
+              </button>
+            </a>
+            <a style="text-decoration: none;" href="./vantage.html">
+              <button onclick="handleButtonClick3()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Vantage 1.jpg"
+                  style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                <h1 class="fs-5 fw-light" style="color: white;"> Vantage</h1>
+              </button>
+            </a>
+            <a style="text-decoration: none;" href="./bolt.html">
+              <button onclick="handleButtonClick4()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Bolt 2.jpg"
+                  style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                <h1 class="fs-5 fw-light" style="color: white;"> Bolt</h1>
+              </button>
+            </a>
+            <a style="text-decoration: none;" href="./nest.html">
+              <button onclick="handleButtonClick5()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Nest 2.jpg"
+                  style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                <h1 class="fs-5 fw-light" style="color: white;"> Nest</h1>
+              </button>
+            </a>
+            <a style="text-decoration: none;" href="./waves.html">
+              <button onclick="handleButtonClick6()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/waves 7.jpg"
+                  style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                <h1 class="fs-5 fw-light" style="color: white;"> Waves</h1>
+              </button>
+            </a>
+            <a style="text-decoration: none;" href="./watch.html">
+              <button onclick="handleButtonClick7()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Watch 2.jpg"
+                  style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                <h1 class="fs-5 fw-light" style="color: white;"> Watch</h1>
+              </button>
+            </a>
+            <a style="text-decoration: none;" href="./hive.html">
+              <button onclick="handleButtonClick8()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Hive 8.jpg"
+                  style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                <h1 class="fs-5 fw-light" style="color: white;"> Hive</h1>
+              </button>
+            </a>
+            <a style="text-decoration: none;" href="./wings.html">
+              <button onclick="handleButtonClick9()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Wings.jpg"
+                  style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                <h1 class="fs-5 fw-light" style="color: white;"> Wings</h1>
+              </button>
+            </a>
+            <a style="text-decoration: none;" href="./index.html">
+              <button onclick="handleButtonClick()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/vosoft_l.png"
+                  style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                <h1 class="fs-5 fw-light" style="color: white;"> Home</h1>
+              </button>
+            </a>
+            <a style="text-decoration: none;" href="./arya.html">
+              <button onclick="handleButtonClick1()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Arya 3.jpg"
+                  style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                <h1 class="fs-5 fw-light" style="color: white;"> Arya</h1>
+              </button>
+            </a>
+            <a style="text-decoration: none;" href="./roots.html">
+              <button onclick="handleButtonClick2()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Roots 1.jpg"
+                  style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                <h1 class="fs-5 fw-light" style="color: white;"> Roots</h1>
+              </button>
+            </a>
+            <a style="text-decoration: none;" href="./vantage.html">
+              <button onclick="handleButtonClick3()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Vantage 1.jpg"
+                  style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                <h1 class="fs-5 fw-light" style="color: white;"> Vantage</h1>
+              </button>
+            </a>
+            <a style="text-decoration: none;" href="./bolt.html">
+              <button onclick="handleButtonClick4()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Bolt 2.jpg"
+                  style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                <h1 class="fs-5 fw-light" style="color: white;"> Bolt</h1>
+              </button>
+            </a>
+            <a style="text-decoration: none;" href="./nest.html">
+              <button onclick="handleButtonClick5()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Nest 2.jpg"
+                  style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                <h1 class="fs-5 fw-light" style="color: white;"> Nest</h1>
+              </button>
+            </a>
+            <a style="text-decoration: none;" href="./waves.html">
+              <button onclick="handleButtonClick6()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/waves 7.jpg"
+                  style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                <h1 class="fs-5 fw-light" style="color: white;"> Waves</h1>
+              </button>
+            </a>
+            <a style="text-decoration: none;" href="./watch.html">
+              <button onclick="handleButtonClick7()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Watch 2.jpg"
+                  style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                <h1 class="fs-5 fw-light" style="color: white;"> Watch</h1>
+              </button>
+            </a>
+            <a style="text-decoration: none;" href="./hive.html">
+              <button onclick="handleButtonClick8()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Hive 8.jpg"
+                  style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                <h1 class="fs-5 fw-light" style="color: white;"> Hive</h1>
+              </button>
+            </a>
+            <a style="text-decoration: none;" href="./wings.html">
+              <button onclick="handleButtonClick9()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Wings.jpg"
+                  style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                <h1 class="fs-5 fw-light" style="color: white;"> Wings</h1>
+              </button>
+            </a>
+            <a style="text-decoration: none;" href="./index.html">
+              <button onclick="handleButtonClick()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/vosoft_l.png"
+                  style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                <h1 class="fs-5 fw-light" style="color: white;"> Home</h1>
+              </button>
+            </a>
+            <a style="text-decoration: none;" href="./arya.html">
+              <button onclick="handleButtonClick1()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Arya 3.jpg"
+                  style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                <h1 class="fs-5 fw-light" style="color: white;"> Arya</h1>
+              </button>
+            </a>
+            <a style="text-decoration: none;" href="./roots.html">
+              <button onclick="handleButtonClick2()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Roots 1.jpg"
+                  style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                <h1 class="fs-5 fw-light" style="color: white;"> Roots</h1>
+              </button>
+            </a>
+            <a style="text-decoration: none;" href="./vantage.html">
+              <button onclick="handleButtonClick3()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Vantage 1.jpg"
+                  style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                <h1 class="fs-5 fw-light" style="color: white;"> Vantage</h1>
+              </button>
+            </a>
+            <a style="text-decoration: none;" href="./bolt.html">
+              <button onclick="handleButtonClick4()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Bolt 2.jpg"
+                  style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                <h1 class="fs-5 fw-light" style="color: white;"> Bolt</h1>
+              </button>
+            </a>
+            <a style="text-decoration: none;" href="./nest.html">
+              <button onclick="handleButtonClick5()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Nest 2.jpg"
+                  style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                <h1 class="fs-5 fw-light" style="color: white;"> Nest</h1>
+              </button>
+            </a>
+            <a style="text-decoration: none;" href="./waves.html">
+              <button onclick="handleButtonClick6()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/waves 7.jpg"
+                  style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                <h1 class="fs-5 fw-light" style="color: white;"> Waves</h1>
+              </button>
+            </a>
+            <a style="text-decoration: none;" href="./watch.html">
+              <button onclick="handleButtonClick7()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Watch 2.jpg"
+                  style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                <h1 class="fs-5 fw-light" style="color: white;"> Watch</h1>
+              </button>
+            </a>
+            <a style="text-decoration: none;" href="./hive.html">
+              <button onclick="handleButtonClick8()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Hive 8.jpg"
+                  style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                <h1 class="fs-5 fw-light" style="color: white;"> Hive</h1>
+              </button>
+            </a>
+            <a style="text-decoration: none;" href="./wings.html">
+              <button onclick="handleButtonClick9()" class="d-flex align-items-center ms-5 me-lg-5 pe-2"
+                style="background-color: rgba(0, 0, 0, 0);"><img src="./assets/Images/Wings.jpg"
+                  style="width: 120px; height: 70px; border-radius: 5px;" class="me-2" alt="">
+                <h1 class="fs-5 fw-light" style="color: white;"> Wings</h1>
+              </button>
+            </a>
+          </div>
+        </div>
+    </div>
+  </section>
+    
+    <section class="Details pt-3 pb-3" id="Details" style="background-color: #cdeefb;">
+        <div class="container">
+            <div class="row">
+                <h2 class="display-4  text-center mt-3" style="color: #017bcb;">Common platform for information<br> & operations handling</h2>
+                <div class="col-lg-6 col-12 p-4">
+                    <p class="m-0" style="text-align: justify;">Vantage point streamlines access to multiple applications with a single login. Ensures security with robust multi-factor authentication. Enables web-based access for secure data management from anywhere. Experience ease, security, and accessibility with Vantage Point for streamlined login experiences.</p>
+                </div>
+                <div class="col-lg-6 col-12 p-4">
+                    <p  style="text-align: justify;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque
+                        velit quidem
+                        exercitationem provident hic aperiam, ipsam ad. Quam, itaque asperiores hic impedit architecto
+                        numquam beatae deleniti
+                        tempora, unde mollitia nobis?
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe laudantium dolores dolorem iusto
+                        quam? Consequuntur labore suscipit reiciendis qui exercitationem dicta alias quibusdam facilis
+                        vitae, ipsa modi enim expedita explicabo.</p>
+                </div>
+            </div>
+            <!-- <h2 class="mb-3 display-6 fw-bold">Key Features: </h2> -->
+
+            <section class="pt-2 pb-3">
+                <div class="container">
+                    <div class="row justify-content-center d-flex flex-row" style="position: relative;">
+                        <div class="col-6 d-flex d-lg-none d-block">
+                        </div>
+                        <div class="col-6 text-right d-flex justify-content-end d-lg-none d-block">
+                            <a class="btn btn-primary mb-3 me-1"
+                                style="background-color: transparent; border: 0; font-size: 20px; color: gray;"
+                                href="#carouselExample" role="button" data-slide="prev">
+                                <i class="fas fa-angle-left"></i>
+                            </a>
+                            <a class="btn btn-primary mb-3"
+                                style="background-color: transparent; border: 0; font-size: 20px; color: gray;"
+                                href="#carouselExample" role="button" data-slide="next">
+                                <i class="fas fa-angle-right"></i>
+                            </a>
+                        </div>
+                        <div class="col-1 d-lg-flex d-none justify-content-center align-items-center">
+                            <a class="btn btn-primary mb-3 me-1"
+                                style="background-color: transparent; border: 0; font-size: 40px; color: gray;"
+                                href="#carouselExample" role="button" data-slide="prev">
+                                <i class="fas fa-angle-left"></i>
+                            </a>
+                        </div>
+                        <div class="col-lg-10 col-12">
+                            <div id="carouselExample" class="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <div class="row d-flex justify-content-center m-0">
+                                            <div class="col-lg-5 m-4 card p-0"
+                                                style="border-radius: 15px; border-top: 6px solid #017bcb; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
+                                                <div class="mt-3 text-center">
+                                                    <img src="./assets/Images/vlogo1.png" class="img-fluid"
+                                                        style="width: 100px;" alt="">
+                                                </div>
+                                                <div class="card-body p-4" style="height: 480px;">
+                                                    <h4 class="card-title display-6 fs-3" style="color: #017bcb;">Eliminates duplication of data and functions, in the digital transformation journey
+
+                                                    </h4>
+                                                    <p class="card-text" style="text-align: justify;">Vantage is a functional framework designed to revolutionize operations and enhance customer experiences. With a range of powerful modules, Vantage enables seamless single sign-on, robust authentication, data management, advanced reporting, and efficient communication channels. Embrace Vantage and elevate your operations to new heights.
+
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-5 m-4 card p-0"
+                                                style="border-radius: 15px; border-top: 6px solid #017bcb; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
+                                                <div class="mt-3 text-center">
+                                                    <img src="./assets/Images/vlogo2.png" class="img-fluid"
+                                                        style="width: 100px;" alt="">
+                                                </div>
+                                                
+                                                <div class="card-body p-4">
+                                                    <h4 class="card-title display-6 fs-3" style="color: #017bcb;">Streamlining operations for the digital era</h4>
+                                                    <p class="card-text" style="text-align: justify;">Vantage is a cutting-edge framework that streamlines operations, enhances security, and delivers exceptional customer experiences. Vantage enables seamless authentication, efficient data management, comprehensive reporting, and effective communication channels, ensuring that you stay at the forefront of digital transformation.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        
+                                        <div class="row d-flex justify-content-center m-0">
+                                            <div class="col-lg-5 m-4 card p-0"
+                                                style="border-radius: 15px; border-top: 6px solid #017bcb; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
+                                                <div class="mt-3 text-center">
+                                                    <img src="./assets/Images/vlogo3.png" class="img-fluid"
+                                                        style="width: 100px;" alt="">
+                                                </div>
+                                                <div class="card-body p-4" style="height: 480px;">
+                                                    <h4 class="card-title display-6 fs-3" style="color: #017bcb;">
+                                                        Vantage point - Single sign-on and MFA </h4>
+                                                    <p class="card-text" style="text-align: justify;">Vantage point offers a secure authentication experience for both employees and customers. With single sign-on capabilities, users can access multiple applications with a single login. The module also provides robust multi-factor authentication methods, ensuring security and compliance.
+ 
+
+
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-5 m-4 card p-0"
+                                                style="border-radius: 15px; border-top: 6px solid #017bcb; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
+                                                <div class="mt-3 text-center">
+                                                    <img src="./assets/Images/vlogo4.png" class="img-fluid"
+                                                        style="width: 100px;" alt="">
+                                                </div>
+                                                <div class="card-body p-4">
+                                                    <h4 class="card-title display-6 fs-3" style="color: #017bcb;">
+                                                        Vantage blocks - Parameter management </h4>
+                                                    <p class="card-text" style="text-align: justify;">Vantage blocks enables you to manage and configure parameters efficiently; from transaction limits to user permissions, Vantage Block allows you to define and customize parameters based on their unique requirements, providing granular control and flexibility.
+
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        
+                                        <div class="row d-flex justify-content-center m-0">
+                                            <div class="col-lg-5 m-4 card p-0"
+                                                style="border-radius: 15px; border-top: 6px solid #017bcb; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
+                                                <div class="mt-3 text-center">
+                                                    <img src="./assets/Images/vlogo5.png" class="img-fluid"
+                                                        style="width: 100px;" alt="">
+                                                </div>
+                                                <div class="card-body p-4" style="height: 480px;">
+                                                    <h4 class="card-title display-6 fs-3" style="color: #017bcb;">
+                                                        Vantage lake - Data lake for transaction management  </h4>
+                                                    <p class="card-text" style="text-align: justify;">Vantage lake serves as a centralized repository for transactional data, encompassing various payment systems such as NACH, Cheques, UPI, IMPS, and Wires. With Vantage Lake, you can efficiently store, analyze, and access transactional data, gaining valuable insights on customer behavior and habits.
+
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-5 m-4 card p-0"
+                                                style="border-radius: 15px; border-top: 6px solid #017bcb; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
+                                                <div class="mt-3 text-center">
+                                                    <img src="./assets/Images/vlogo6.png" class="img-fluid"
+                                                        style="width: 100px;" alt="">
+                                                </div>
+                                                <div class="card-body p-4">
+                                                    <h4 class="card-title display-6 fs-3" style="color: #017bcb;">
+                                                        Vantage index - Customer information file </h4>
+                                                    <p class="card-text" style="text-align: justify;">Vantage index acts as a comprehensive customer information repository, consolidating and organizing customer data required for different functions from various sources. All applications can easily access the single source and version of the customer details.
+
+
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        
+                                        <div class="row d-flex justify-content-center m-0">
+                                            <div class="col-lg-5 m-4 card p-0"
+                                                style="border-radius: 15px; border-top: 6px solid #017bcb; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
+                                                <div class="mt-3 text-center">
+                                                    <img src="./assets/Images/vlogo7.png" class="img-fluid"
+                                                        style="width: 100px;" alt="">
+                                                </div>
+                                                <div class="card-body p-4" style="height: 480px;">
+                                                    <h4 class="card-title display-6 fs-3" style="color: #017bcb;">
+                                                        Vantage post - Communication channels </h4>
+                                                    <p class="card-text" style="text-align: justify;">Vantage post provides a unified platform for seamless communication through SMS, email, and application messages. All products and applications can send and receive notifications, alerts, and updates to customers through Vantage Post.
+
+
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-5 m-4 card p-0"
+                                                style="border-radius: 15px; border-top: 6px solid #017bcb; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
+                                                <div class="mt-3 text-center">
+                                                    <img src="./assets/Images/vlogo8.png" class="img-fluid"
+                                                        style="width: 100px;" alt="">
+                                                </div>
+                                                <div class="card-body p-4">
+                                                    <h4 class="card-title display-6 fs-3" style="color: #017bcb;">
+                                                        Vantage stock: - Asset management</h4>
+                                                    <p class="card-text" style="text-align: justify;">Vantage stock is a common platform for shares, collateral management, fixed assets management and inventory management. Stock helps you gain real-time visibility, optimize utilization, and track assets and inventory throughout their lifecycle.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        
+                                        <div class="row d-flex justify-content-center m-0">
+                                            <div class="col-lg-5 m-4 card p-0"
+                                                style="border-radius: 15px; border-top: 6px solid #017bcb; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
+                                                <div class="mt-3 text-center">
+                                                    <img src="./assets/Images/vlogo9.png" class="img-fluid"
+                                                        style="width: 100px;" alt="">
+                                                </div>
+                                                <div class="card-body p-4" style="height: 480px;">
+                                                    <h4 class="card-title display-6 fs-3" style="color: #017bcb;">
+                                                        Vantage reports - Advanced reporting </h4>
+                                                    <p class="card-text" style="text-align: justify;">Vantage reports offers powerful report capabilities, ranging from creating ad hoc reporting, calling predefined reports, accessing archived reports through the user defined cabinet structure or through queries. Vantage Reports also provides an application-based view.
+
+
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-5 m-4 card p-0"
+                                                style="border-radius: 15px; border-top: 6px solid #017bcb; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
+                                                <div class="mt-3 text-center">
+                                                    <img src="./assets/Images/vlogo10.png" class="img-fluid"
+                                                        style="width: 100px;" alt="">
+                                                </div>
+                                                <div class="card-body p-4">
+                                                    <h4 class="card-title display-6 fs-3" style="color: #017bcb;">
+                                                        Vantage documents - Document management </h4>
+                                                    <p class="card-text" style="text-align: justify;">Vantage documents streamlines document management processes, allowing you to securely store, organize, and retrieve essential documents; from customer contracts to signature cards, Vantage Documents ensures easy access and efficient document handling, reducing manual efforts and improving compliance through published APIs and through a user-friendly screen.
+
+
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        
+                                        <div class="row d-flex justify-content-center m-0">
+                                            <div class="col-lg-5 m-4 card p-0"
+                                                style="border-radius: 15px; border-top: 6px solid #017bcb; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
+                                                <div class="mt-3 text-center">
+                                                    <img src="./assets/Images/vlogo11.png" class="img-fluid"
+                                                        style="width: 100px;" alt="">
+                                                </div>
+                                                <div class="card-body p-4" style="height: 480px;">
+                                                    <h4 class="card-title display-6 fs-3" style="color: #017bcb;">
+                                                        Vantage console - Centralized control </h4>
+                                                    <p class="card-text" style="text-align: justify;">Vantage console serves as a centralized control system, providing you with a holistic view of your operations and modules within the Vantage framework. It offers comprehensive administration, monitoring, and configuration capabilities, ensuring smooth management of the entire Vantage ecosystem.
+
+                                                        
+
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-5 m-4 card p-0"
+                                                style="border-radius: 15px; border-top: 6px solid #017bcb; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
+                                                <div class="mt-3 text-center">
+                                                    <img src="./assets/Images/vlogo12.png" class="img-fluid"
+                                                        style="width: 100px;" alt="">
+                                                </div>
+                                                <div class="card-body p-4">
+                                                    <h4 class="card-title display-6 fs-3" style="color: #017bcb;">
+                                                        Unlock the power of vantage </h4>
+                                                    <p class="card-text" style="text-align: justify;">Join leading banks worldwide in embracing Vantage and revolutionize your banking operations. Seamlessly authenticate users, efficiently manage parameters and data, communicate effectively, and generate insightful reports. Contact us today to learn more about Vantage and how it can transform your bank's digital capabilities.
+
+
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-1 d-lg-flex d-none justify-content-center align-items-center">
+                            <a class="btn btn-primary mb-3"
+                                style="background-color: transparent; border: 0; font-size: 40px; color: gray;"
+                                href="#carouselExample" role="button" data-slide="next">
+                                <i class="fas fa-angle-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                </div>
+            </section>
+
+        </div>
+
+    </section>
+    <!-- Include jQuery from a CDN -->
+    <script src="./assets/js/script2.js"></script>
+    <script src="./assets/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
